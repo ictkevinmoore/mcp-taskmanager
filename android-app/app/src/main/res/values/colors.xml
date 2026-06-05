@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand palette — mirrors the CSS custom properties in index.html -->
+    <color name="navy">#04182e</color>
+    <color name="navy_mid">#0a2847</color>
+    <color name="blue">#0369a1</color>
+    <color name="sky">#0ea5e9</color>
+    <color name="ice">#bae6fd</color>
+    <color name="accent">#f59e0b</color>
+    <color name="white">#f8fafc</color>
+    <color name="slate">#64748b</color>
+</resources>

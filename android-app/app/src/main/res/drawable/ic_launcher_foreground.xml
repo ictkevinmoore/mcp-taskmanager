@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adaptive icon foreground: sky-blue water droplet with white "KS" initials.
+  108×108dp canvas; the safe zone for icon content is the central 72×72dp.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Water droplet body (teardrop pointing upward) -->
+    <path
+        android:fillColor="#0ea5e9"
+        android:pathData="
+            M54,18
+            C54,18 26,50 26,66
+            C26,82 38.5,94 54,94
+            C69.5,94 82,82 82,66
+            C82,50 54,18 54,18 Z" />
+
+    <!-- Soft left-side highlight for depth -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.25"
+        android:pathData="
+            M37,50 C33,58 31,67 34,75
+            C36,68 36,60 39,52
+            C40,49 42,46 45,44
+            C41,46 38,48 37,50 Z" />
+
+    <!-- "K" — vertical stroke -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="37"
+        android:y="51"
+        android:width="5"
+        android:height="24" />
+
+    <!-- "K" — upper arm (top-right diagonal) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,63 L51,51 L57,51 L48,63 Z" />
+
+    <!-- "K" — lower arm (bottom-right diagonal) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,63 L51,75 L57,75 L48,63 Z" />
+
+    <!-- "S" — constructed from two arcs approximated as bezier paths -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="
+            M62,51
+            C57,51 56.5,57 61,59
+            C65.5,61 68,65 64.5,68
+            C62.5,69.5 59,68.5 59,68.5
+            L59,72.5
+            C59,72.5 65.5,74 70,70
+            C74,66 71,59.5 66,57.5
+            C61,55.5 61.5,53 64,52
+            C66,51 69,52.5 69,52.5
+            L69,48.5
+            C69,48.5 67,51 62,51 Z" />
+
+</vector>

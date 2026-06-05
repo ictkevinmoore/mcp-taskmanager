@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>KS Power Washing LLC | Pressure Washing Wichita, KS</title>
+<style>
+/* ── INLINE ICON SVGs ── */
+.ico{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;flex-shrink:0;}
+.ico svg{display:block;}
+
+/* ── SYSTEM FONT STACK (no external CSS needed) ── */
+:root{
+  --navy:#04182e;--navy-mid:#0a2847;--blue:#0369a1;--sky:#0ea5e9;
+  --ice:#bae6fd;--white:#f8fafc;--slate:#64748b;--text:#0f172a;--accent:#f59e0b;
+  --ff-head:'Arial Black','Arial',system-ui,sans-serif;
+  --ff-body:'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-body);background:var(--white);color:var(--text);overflow-x:hidden;-webkit-text-size-adjust:100%;}
+
+/* ── ANNOUNCE ── */
+.ann{background:linear-gradient(90deg,var(--blue),var(--sky));color:#fff;text-align:center;padding:10px 20px;font-size:0.82rem;font-weight:700;letter-spacing:0.05em;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;position:relative;z-index:101;}
+.ann a{color:#fde68a;text-decoration:none;font-weight:800;border-bottom:1px solid rgba(253,230,138,0.5);}
+.ann a:hover{color:#fff;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:68px;background:rgba(4,24,46,0.98);backdrop-filter:blur(14px);border-bottom:1px solid rgba(14,165,233,0.18);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo img{height:48px;width:auto;border-radius:6px;background:#000;padding:2px;display:block;}
+.nav-logo-main{font-family:var(--ff-head);font-weight:900;font-size:1.1rem;letter-spacing:0.04em;color:#fff;display:block;text-transform:uppercase;line-height:1.1;}
+.nav-logo-sub{font-size:0.6rem;font-weight:700;letter-spacing:0.2em;color:var(--sky);text-transform:uppercase;display:block;}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-weight:600;font-size:0.84rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--sky);}
+.nav-cta{display:flex;align-items:center;gap:10px;}
+.nav-phone{color:var(--ice);text-decoration:none;font-weight:700;font-size:0.84rem;white-space:nowrap;}
+.btn-nav{background:var(--sky);color:#fff;padding:8px 16px;border-radius:7px;font-weight:700;font-size:0.8rem;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap;}
+.btn-nav:hover{background:#0284c7;}
+.btn-portal{background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.5);color:var(--accent);padding:8px 14px;border-radius:7px;font-weight:700;font-size:0.8rem;text-decoration:none;cursor:pointer;white-space:nowrap;transition:all 0.2s;}
+.btn-portal:hover{background:rgba(245,158,11,0.25);color:#fff;}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1;}
+
+/* ── MOBILE MENU ── */
+.mob-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:200;padding:80px 5vw 40px;flex-direction:column;overflow-y:auto;}
+.mob-menu.open{display:flex;}
+.mob-close{position:absolute;top:14px;right:5vw;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;}
+.mob-menu a{display:block;color:rgba(255,255,255,0.85);text-decoration:none;padding:14px 0;font-weight:600;font-size:1rem;border-bottom:1px solid rgba(255,255,255,0.08);}
+.mob-cta{margin-top:24px;display:flex;flex-direction:column;gap:10px;}
+
+/* ── HERO ── */
+.hero{min-height:calc(100vh - 108px);display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,#061c35 60%,var(--navy-mid) 100%);padding:80px 5vw 60px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 55%,rgba(3,105,161,0.22) 0%,transparent 65%),radial-gradient(ellipse 45% 60% at 15% 35%,rgba(14,165,233,0.1) 0%,transparent 60%);}
+.hero-grid{position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(rgba(14,165,233,1) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,1) 1px,transparent 1px);background-size:60px 60px;}
+.drops-c{position:absolute;right:0;top:0;bottom:0;width:45%;overflow:hidden;pointer-events:none;}
+.drop{position:absolute;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,rgba(14,165,233,0.22),rgba(3,105,161,0.1));border:1px solid rgba(14,165,233,0.16);animation:floatD linear infinite;}
+@keyframes floatD{0%{transform:translateY(110%) rotate(-45deg) scale(0.8);opacity:0;}15%{opacity:1;}85%{opacity:0.5;}100%{transform:translateY(-110%) rotate(-45deg) scale(1.1);opacity:0;}}
+.hero-inner{position:relative;z-index:2;max-width:720px;}
+.hero-logo-row{display:flex;align-items:center;gap:18px;margin-bottom:26px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,0.12);border:1px solid rgba(14,165,233,0.3);color:var(--sky);padding:6px 16px;border-radius:100px;font-size:0.7rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:22px;}
+.hero-title{font-family:var(--ff-head);font-weight:900;font-size:clamp(2.6rem,7vw,5rem);line-height:0.97;color:#fff;text-transform:uppercase;margin-bottom:22px;letter-spacing:-0.01em;}
+.hero-title .sky{color:var(--sky);}
+.hero-sub{font-size:clamp(0.95rem,1.8vw,1.1rem);font-weight:400;color:rgba(186,230,253,0.85);line-height:1.7;max-width:560px;margin-bottom:36px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
+.btn-main{background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;padding:13px 26px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 28px rgba(14,165,233,0.35);transition:all 0.2s;}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(14,165,233,0.45);}
+.btn-outline{color:#fff;border:2px solid rgba(255,255,255,0.22);padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;font-size:0.92rem;background:rgba(255,255,255,0.04);}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.45);}
+.btn-portal-hero{background:rgba(245,158,11,0.12);border:1.5px solid rgba(245,158,11,0.45);color:var(--accent);padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:0.9rem;transition:all 0.2s;cursor:pointer;}
+.btn-portal-hero:hover{background:rgba(245,158,11,0.22);color:#fff;}
+.hero-vals{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-val{display:flex;align-items:center;gap:10px;}
+.hv-ic{width:34px;height:34px;border-radius:8px;background:rgba(14,165,233,0.12);border:1px solid rgba(14,165,233,0.2);color:var(--sky);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.hero-val strong{display:block;font-size:0.82rem;font-weight:700;color:#fff;}
+.hero-val span{font-size:0.7rem;color:rgba(186,230,253,0.7);}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:#fff;border-bottom:1px solid #e2e8f0;padding:16px 5vw;}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;}
+.trust-item{display:flex;align-items:center;gap:9px;}
+.trust-icon{width:32px;height:32px;border-radius:7px;background:#f0f9ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.trust-text strong{display:block;font-weight:700;font-size:0.8rem;}
+.trust-text span{font-size:0.67rem;color:var(--slate);}
+
+/* ── SECTIONS ── */
+.sec{padding:76px 5vw;max-width:1240px;margin:0 auto;}
+.sec-lbl{font-size:0.68rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:9px;}
+.sec-title{font-family:var(--ff-head);font-weight:900;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--text);letter-spacing:-0.01em;text-transform:uppercase;line-height:1.05;margin-bottom:13px;}
+.sec-sub{font-size:0.94rem;color:var(--slate);max-width:540px;line-height:1.7;}
+.sec-head{margin-bottom:44px;}
+.center{text-align:center;}
+.center .sec-sub{margin:0 auto;}
+
+/* ── SERVICES ── */
+.svc-wrap{background:#f8fafc;padding:76px 0;}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;}
+.svc-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:26px;position:relative;overflow:hidden;transition:all 0.3s;}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sky),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.svc-card:hover{box-shadow:0 16px 48px rgba(0,0,0,0.08);transform:translateY(-4px);border-color:#bae6fd;}
+.svc-card:hover::before{transform:scaleX(1);}
+.svc-icon{width:48px;height:48px;border-radius:11px;background:#f0f9ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;transition:all 0.3s;}
+.svc-card:hover .svc-icon{background:var(--sky);color:#fff;}
+.svc-card h3{font-family:var(--ff-head);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:9px;color:var(--text);}
+.svc-card p{font-size:0.87rem;color:var(--slate);line-height:1.7;margin-bottom:16px;}
+.svc-tag{font-size:0.64rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--sky);}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+.about-img{border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--navy-mid),var(--navy));aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;}
+.about-img p{font-family:var(--ff-head);font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.22);}
+.about-stats{position:absolute;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(4,24,46,0.88);backdrop-filter:blur(8px);border-top:1px solid rgba(14,165,233,0.2);}
+.astat{padding:13px 8px;text-align:center;}
+.astat strong{display:block;font-family:var(--ff-head);font-weight:900;font-size:1.5rem;color:var(--sky);line-height:1;}
+.astat span{font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(186,230,253,0.55);}
+.about-mission{background:linear-gradient(135deg,#e0f2fe,#f0f9ff);border:1px solid #bae6fd;border-left:4px solid var(--sky);border-radius:11px;padding:20px 22px;margin-top:24px;}
+.about-mission h5{font-family:var(--ff-head);font-weight:800;font-size:0.92rem;text-transform:uppercase;color:var(--navy);margin-bottom:7px;}
+.about-mission p{font-size:0.88rem;color:var(--blue);font-weight:500;line-height:1.6;font-style:italic;}
+.about-vals{margin-top:24px;display:flex;flex-direction:column;gap:13px;}
+.about-val{display:flex;gap:11px;align-items:flex-start;}
+.av-ic{width:36px;height:36px;border-radius:9px;background:#f0f9ff;color:var(--blue);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.about-val h5{font-weight:700;font-size:0.88rem;margin-bottom:2px;color:var(--text);}
+.about-val p{font-size:0.81rem;color:var(--slate);line-height:1.5;}
+
+/* ── PROCESS ── */
+.proc-wrap{background:var(--navy);padding:76px 5vw;}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06);border-radius:13px;overflow:hidden;margin-top:44px;}
+.proc-step{background:rgba(255,255,255,0.03);padding:28px 22px;transition:background 0.2s;}
+.proc-step:hover{background:rgba(14,165,233,0.07);}
+.step-n{font-family:var(--ff-head);font-weight:900;font-size:2.8rem;color:rgba(14,165,233,0.12);line-height:1;margin-bottom:10px;}
+.step-ic{width:38px;height:38px;border-radius:9px;background:rgba(14,165,233,0.1);color:var(--sky);display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:13px;}
+.proc-step h4{font-family:var(--ff-head);font-weight:800;font-size:0.98rem;text-transform:uppercase;letter-spacing:0.04em;color:#fff;margin-bottom:7px;}
+.proc-step p{font-size:0.83rem;color:rgba(186,230,253,0.66);line-height:1.6;}
+
+/* ── GALLERY ── */
+.gal-wrap{background:#f8fafc;padding:76px 5vw;}
+.photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.photo-card{border-radius:14px;overflow:hidden;position:relative;background:#e0f2fe;box-shadow:0 4px 16px rgba(0,0,0,0.1);transition:transform 0.25s,box-shadow 0.25s;cursor:pointer;}
+.photo-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,0.16);}
+.photo-card img{width:100%;display:block;object-fit:cover;}
+.photo-card.wide{grid-column:span 2;height:320px;}
+.photo-card.sq{height:260px;}
+.photo-card.tall{height:340px;}
+.photo-card.wide img{height:320px;}
+.photo-card.sq img{height:260px;}
+.photo-card.tall img{height:340px;}
+.photo-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(4,24,46,0.82));color:#fff;padding:28px 16px 14px;font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;opacity:1;transition:opacity 0.22s;z-index:2;}
+.photo-card:hover .photo-cap{opacity:1;}
+
+/* ── PORTAL SECTION ── */
+.portal-wrap{background:linear-gradient(135deg,var(--navy),#061c35);padding:72px 5vw;position:relative;overflow:hidden;}
+.portal-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+.portal-left .sec-title{color:#fff;}
+.portal-left .sec-sub{color:rgba(186,230,253,0.78);}
+.portal-feats{margin-top:24px;display:flex;flex-direction:column;gap:13px;}
+.portal-feat{display:flex;align-items:flex-start;gap:11px;}
+.pf-ic{width:36px;height:36px;border-radius:9px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.pf-text strong{display:block;font-size:0.88rem;font-weight:700;color:#fff;margin-bottom:1px;}
+.pf-text span{font-size:0.78rem;color:rgba(186,230,253,0.68);}
+.portal-card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 30px 65px rgba(0,0,0,0.32);}
+.portal-card h4{font-family:var(--ff-head);font-weight:900;font-size:1.35rem;text-transform:uppercase;margin-bottom:5px;color:var(--text);}
+.psub{font-size:0.8rem;color:var(--slate);margin-bottom:22px;}
+.portal-opts{display:flex;flex-direction:column;gap:10px;}
+.portal-opt{display:flex;align-items:center;gap:12px;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:11px;padding:15px;text-decoration:none;transition:all 0.2s;cursor:pointer;}
+.portal-opt:hover{border-color:var(--sky);background:#f0f9ff;transform:translateX(3px);}
+.portal-opt.gold:hover{border-color:var(--accent);background:#fffbeb;}
+.po-ic{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.po-ic.blue{background:rgba(14,165,233,0.1);color:var(--blue);}
+.po-ic.amber{background:rgba(245,158,11,0.1);color:var(--accent);}
+.po-ic.green{background:rgba(16,185,129,0.1);color:#059669;}
+.po-text strong{display:block;font-size:0.88rem;font-weight:700;color:var(--text);}
+.po-text span{font-size:0.76rem;color:var(--slate);}
+.po-arr{margin-left:auto;color:#cbd5e1;font-size:13px;}
+.portal-divider{display:flex;align-items:center;gap:9px;font-size:0.68rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;}
+.portal-divider::before,.portal-divider::after{content:'';flex:1;height:1px;background:#e2e8f0;}
+
+/* ── TESTIMONIALS ── */
+.testi-wrap{background:#fff;padding:76px 5vw;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;}
+.testi-card{background:#f8fafc;border-radius:13px;padding:24px;border:1px solid #e2e8f0;transition:box-shadow 0.2s;}
+.testi-card:hover{box-shadow:0 10px 32px rgba(0,0,0,0.07);}
+.stars{color:var(--accent);font-size:1.1rem;margin-bottom:11px;letter-spacing:2px;}
+.testi-text{font-size:0.89rem;color:#334155;line-height:1.7;margin-bottom:16px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--blue));display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-weight:800;color:#fff;font-size:0.9rem;}
+.testi-name{font-weight:700;font-size:0.84rem;color:var(--text);}
+.testi-loc{font-size:0.7rem;color:var(--slate);}
+
+/* ── CONTACT ── */
+.contact-wrap{background:var(--navy);padding:76px 5vw;}
+.contact-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
+.contact-left .sec-title{color:#fff;}
+.contact-left .sec-sub{color:rgba(186,230,253,0.75);}
+.contact-methods{margin-top:28px;display:flex;flex-direction:column;gap:12px;}
+.contact-method{display:flex;align-items:center;gap:13px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:11px;padding:15px 17px;text-decoration:none;transition:all 0.2s;cursor:pointer;}
+.contact-method:hover{background:rgba(14,165,233,0.1);border-color:rgba(14,165,233,0.3);}
+.cm-ic{width:38px;height:38px;border-radius:9px;background:rgba(14,165,233,0.12);color:var(--sky);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.cm-lbl{font-size:0.66rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);}
+.cm-val{font-weight:600;color:#fff;font-size:0.92rem;margin-top:1px;}
+.cform{background:#fff;border-radius:16px;padding:30px;}
+.cform h4{font-family:var(--ff-head);font-weight:900;font-size:1.3rem;text-transform:uppercase;margin-bottom:5px;}
+.cform .sub{font-size:0.8rem;color:var(--slate);margin-bottom:20px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.fg{margin-bottom:13px;}
+.fl{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:5px;}
+.fc{width:100%;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px 13px;font-family:var(--ff-body);font-size:0.88rem;color:var(--text);outline:none;transition:border-color 0.2s;appearance:none;}
+.fc:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(14,165,233,0.1);}
+textarea.fc{resize:vertical;min-height:80px;}
+.btn-cta{width:100%;background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;border:none;border-radius:8px;padding:12px;font-family:var(--ff-head);font-weight:800;font-size:0.96rem;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;box-shadow:0 5px 16px rgba(14,165,233,0.26);}
+.btn-cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(14,165,233,0.36);}
+
+/* ── REPORTS ── */
+.rpt-wrap{background:linear-gradient(180deg,#020e1c,#061c35);padding:76px 5vw;border-top:1px solid rgba(14,165,233,0.1);}
+.rpt-week{background:rgba(4,24,46,0.7);border:1px solid rgba(14,165,233,0.12);border-radius:12px;overflow:hidden;margin-bottom:13px;transition:box-shadow 0.2s;}
+.rpt-week:hover{box-shadow:0 10px 32px rgba(0,0,0,0.28);}
+.rpt-hdr{display:flex;align-items:center;justify-content:space-between;padding:13px 17px;cursor:pointer;gap:12px;flex-wrap:wrap;background:linear-gradient(90deg,rgba(3,105,161,0.13),rgba(14,165,233,0.05));border-bottom:1px solid rgba(14,165,233,0.1);}
+.rpt-hdr:hover{background:linear-gradient(90deg,rgba(3,105,161,0.2),rgba(14,165,233,0.09));}
+.rpt-wk-title{font-family:var(--ff-head);font-weight:800;font-size:0.96rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:7px;}
+.rpt-meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+.rpt-chip{font-size:0.6rem;font-weight:800;padding:2px 8px;border-radius:5px;letter-spacing:0.06em;text-transform:uppercase;border:1px solid transparent;}
+.c-jobs{background:rgba(14,165,233,0.12);color:#7dd3fc;border-color:rgba(14,165,233,0.2);}
+.c-rev{background:rgba(16,185,129,0.12);color:#6ee7b7;border-color:rgba(16,185,129,0.2);}
+.c-pend{background:rgba(245,158,11,0.12);color:#fcd34d;border-color:rgba(245,158,11,0.2);}
+.c-new2{background:rgba(168,85,247,0.12);color:#d8b4fe;border-color:rgba(168,85,247,0.2);}
+.rpt-tog{color:var(--sky);font-size:11px;opacity:0.7;transition:transform 0.25s;display:inline-block;}
+.rpt-tog.open{transform:rotate(180deg);}
+.rpt-body{display:none;padding:0 17px 14px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.rpt-body.open{display:block;}
+.rpt-table{width:100%;border-collapse:collapse;margin-top:11px;font-size:0.79rem;}
+.rpt-table th{text-align:left;padding:7px 10px;font-size:0.58rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--sky);border-bottom:1px solid rgba(14,165,233,0.17);background:rgba(14,165,233,0.05);}
+.rpt-table td{padding:8px 10px;color:rgba(255,255,255,0.72);border-bottom:1px solid rgba(14,165,233,0.06);vertical-align:middle;}
+.rpt-table tr:last-child td{border-bottom:none;}
+.rpt-table tr:hover td{background:rgba(14,165,233,0.04);}
+.rpt-badge{font-size:0.58rem;font-weight:800;padding:2px 7px;border-radius:100px;text-transform:uppercase;letter-spacing:0.07em;white-space:nowrap;border:1px solid transparent;}
+.b-new{background:rgba(168,85,247,0.15);color:#d8b4fe;border-color:rgba(168,85,247,0.25);}
+.b-confirmed{background:rgba(14,165,233,0.15);color:#93c5fd;border-color:rgba(14,165,233,0.25);}
+.b-pending{background:rgba(245,158,11,0.15);color:#fcd34d;border-color:rgba(245,158,11,0.25);}
+.b-completed{background:rgba(16,185,129,0.15);color:#6ee7b7;border-color:rgba(16,185,129,0.25);}
+.rpt-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;}
+.rpt-kpi{background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.13);border-radius:9px;padding:12px;text-align:center;}
+.rpt-kpi .kv{font-family:var(--ff-head);font-weight:900;font-size:1.5rem;color:#fff;line-height:1;}
+.rpt-kpi .kl{font-size:0.57rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--sky);margin-top:3px;opacity:0.82;}
+.rpt-svc-tags{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px;}
+.rpt-svc-tag{background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.14);border-left:3px solid var(--sky);border-radius:6px;padding:4px 9px;font-size:0.68rem;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:5px;}
+.rpt-svc-tag span{color:var(--sky);font-weight:900;}
+.rpt-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:9px;}
+.rpt-nav-title{font-family:var(--ff-head);font-weight:800;font-size:0.96rem;color:rgba(255,255,255,0.42);text-transform:uppercase;}
+.rpt-filters{display:flex;gap:5px;flex-wrap:wrap;}
+.rbt{background:rgba(14,165,233,0.05);border:1px solid rgba(14,165,233,0.13);color:rgba(255,255,255,0.36);font-size:0.63rem;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;padding:6px 11px;border-radius:6px;cursor:pointer;transition:all 0.18s;}
+.rbt.active{background:rgba(14,165,233,0.16);border-color:var(--sky);color:var(--sky);}
+.rbt:hover:not(.active){background:rgba(14,165,233,0.09);color:rgba(255,255,255,0.65);}
+.rbt-pdf{background:rgba(245,158,11,0.09);border:1px solid rgba(245,158,11,0.32);color:var(--accent);font-size:0.63rem;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;padding:6px 13px;border-radius:6px;cursor:pointer;transition:all 0.18s;display:inline-flex;align-items:center;gap:5px;}
+.rbt-pdf:hover{background:rgba(245,158,11,0.18);color:#fff;}
+.rpt-empty{text-align:center;padding:40px 20px;color:rgba(255,255,255,0.2);font-size:0.86rem;}
+
+/* ── CALENDAR ── */
+.cal-wrap{background:linear-gradient(180deg,#061c35,#04182e);padding:76px 5vw;border-top:1px solid rgba(14,165,233,0.1);}
+.cal-inner{max-width:1200px;margin:0 auto;}
+.cal-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:11px;}
+.cal-nav-row{display:flex;align-items:center;gap:9px;}
+.cal-nb{width:34px;height:34px;border-radius:8px;background:rgba(14,165,233,0.08);border:1px solid rgba(14,165,233,0.2);color:var(--sky);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.cal-nb:hover{background:var(--sky);color:#fff;}
+.cal-month{font-family:var(--ff-head);font-weight:900;font-size:1.45rem;color:#fff;text-transform:uppercase;letter-spacing:0.05em;min-width:200px;text-align:center;}
+.cal-legend{display:flex;gap:10px;flex-wrap:wrap;}
+.cal-leg-item{display:flex;align-items:center;gap:6px;font-size:0.63rem;font-weight:700;color:rgba(255,255,255,0.46);text-transform:uppercase;letter-spacing:0.08em;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:3px 8px;border-radius:5px;}
+.cal-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
+.cal-grid-wrap{background:#fff;border:1px solid #d1d5db;border-radius:15px;overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,0.15);}
+.cal-dow-row{display:grid;grid-template-columns:repeat(7,1fr);background:linear-gradient(90deg,var(--blue),var(--sky));border-bottom:2px solid #bae6fd;}
+.cal-dow{padding:10px 4px;text-align:center;font-size:0.6rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#fff;}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);}
+.cal-day{min-height:86px;padding:8px 7px;background:#fff;border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;position:relative;transition:background 0.15s;cursor:default;}
+.cal-day:nth-child(7n){border-right:none;}
+.cal-day.other{background:#f9fafb;opacity:0.52;}
+.cal-day.today{background:#eff6ff;box-shadow:inset 0 0 0 2px var(--sky);}
+.cal-day.today .cal-dn{color:#fff;font-weight:900;background:var(--sky);border-radius:5px;padding:1px 5px;display:inline-block;}
+.cal-day.has-job{cursor:pointer;}
+.cal-day.has-job:hover{background:#f0f9ff;}
+.cal-dn{font-family:var(--ff-head);font-weight:700;font-size:0.9rem;color:#111827;margin-bottom:4px;}
+.cal-day.other .cal-dn{color:#9ca3af;}
+.cal-pill{font-size:0.59rem;font-weight:700;padding:2px 5px;border-radius:4px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;cursor:pointer;transition:all 0.15s;}
+.cal-pill:hover{transform:translateX(2px);}
+.p-confirmed{background:linear-gradient(90deg,rgba(3,105,161,0.14),rgba(14,165,233,0.07));color:#0369a1;border-left:2px solid var(--sky);}
+.p-pending{background:linear-gradient(90deg,rgba(180,83,9,0.11),rgba(245,158,11,0.05));color:#b45309;border-left:2px solid var(--accent);}
+.p-completed{background:linear-gradient(90deg,rgba(21,128,61,0.11),rgba(34,197,94,0.05));color:#15803d;border-left:2px solid #10b981;}
+.p-new{background:linear-gradient(90deg,rgba(109,40,217,0.11),rgba(168,85,247,0.05));color:#7e22ce;border-left:2px solid #a855f7;}
+.cal-more{font-size:0.57rem;color:var(--blue);font-weight:700;margin-top:1px;opacity:0.68;}
+.cal-pop{position:fixed;z-index:5000;background:linear-gradient(145deg,#0b2240,#071830);border:1px solid rgba(14,165,233,0.22);border-top:2px solid var(--sky);border-radius:12px;padding:15px 17px;width:276px;box-shadow:0 22px 56px rgba(0,0,0,0.52);animation:popIn 0.2s cubic-bezier(0.34,1.56,0.64,1);pointer-events:auto;}
+@keyframes popIn{from{opacity:0;transform:scale(0.88) translateY(6px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.cal-pop h5{font-family:var(--ff-head);font-weight:800;font-size:0.96rem;text-transform:uppercase;color:#fff;margin-bottom:11px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding-right:20px;}
+.pop-row{display:flex;gap:8px;font-size:0.77rem;padding:5px 0;border-bottom:1px solid rgba(14,165,233,0.08);}
+.pop-row:last-child{border-bottom:none;}
+.pop-lbl{color:var(--sky);font-weight:800;text-transform:uppercase;font-size:0.58rem;letter-spacing:0.1em;flex-shrink:0;width:54px;margin-top:2px;opacity:0.8;}
+.pop-val{color:rgba(255,255,255,0.78);font-weight:500;line-height:1.4;}
+.pop-status{font-size:0.58rem;font-weight:800;padding:2px 7px;border-radius:100px;text-transform:uppercase;letter-spacing:0.07em;border:1px solid currentColor;}
+.pop-close{position:absolute;top:10px;right:11px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.46);cursor:pointer;font-size:11px;padding:2px 5px;border-radius:5px;transition:all 0.15s;}
+.pop-close:hover{background:rgba(255,255,255,0.12);color:#fff;}
+.cal-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px;}
+.cal-stat{background:rgba(14,165,233,0.05);border:1px solid rgba(14,165,233,0.1);border-radius:10px;padding:13px 9px;text-align:center;transition:all 0.2s;}
+.cal-stat:hover{background:rgba(14,165,233,0.09);transform:translateY(-2px);}
+.cal-stat .val{font-family:var(--ff-head);font-weight:900;font-size:1.8rem;color:#fff;line-height:1;}
+.cal-stat .lbl{font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--sky);margin-top:4px;opacity:0.76;}
+
+/* ── CHAT ── */
+#chat-launcher{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom));right:calc(24px + env(safe-area-inset-right));z-index:9000;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--blue));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 7px 22px rgba(14,165,233,0.4);transition:transform 0.2s;color:#fff;font-size:22px;}
+#chat-launcher:hover{transform:scale(1.08);}
+.chat-badge{position:absolute;top:-4px;right:-4px;background:var(--accent);color:var(--navy);font-size:0.56rem;font-weight:800;padding:2px 5px;border-radius:100px;}
+#chat-win{position:fixed;bottom:92px;right:24px;z-index:9001;width:370px;max-width:calc(100vw - 32px);border-radius:17px;overflow:hidden;box-shadow:0 22px 68px rgba(0,0,0,0.26);display:flex;flex-direction:column;background:#fff;transform:scale(0.85) translateY(26px);opacity:0;pointer-events:none;transition:transform 0.28s cubic-bezier(0.34,1.56,0.64,1),opacity 0.22s ease;max-height:560px;}
+#chat-win.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
+.chat-hdr{background:linear-gradient(135deg,var(--navy),var(--navy-mid));padding:13px 15px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(14,165,233,0.17);flex-shrink:0;}
+.chat-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--blue));display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0;position:relative;}
+.chat-av::after{content:'';position:absolute;bottom:1px;right:1px;width:8px;height:8px;border-radius:50%;background:#22c55e;border:2px solid var(--navy);}
+.chat-hdr-name{font-family:var(--ff-head);font-weight:700;font-size:0.92rem;color:#fff;text-transform:uppercase;letter-spacing:0.04em;}
+.chat-hdr-status{font-size:0.66rem;color:#86efac;font-weight:500;margin-top:1px;}
+#chat-close-btn{background:rgba(255,255,255,0.08);border:none;color:rgba(255,255,255,0.62);width:26px;height:26px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:background 0.2s;margin-left:auto;}
+#chat-close-btn:hover{background:rgba(255,255,255,0.14);color:#fff;}
+.chat-tabs{display:flex;background:var(--navy);flex-shrink:0;border-bottom:1px solid rgba(14,165,233,0.13);}
+.chat-tab{flex:1;padding:9px 5px;border:none;background:none;cursor:pointer;font-family:var(--ff-head);font-weight:700;font-size:0.73rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);border-bottom:2px solid transparent;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:5px;}
+.chat-tab.active{color:var(--sky);border-bottom-color:var(--sky);}
+.prog-bar{height:3px;background:#e2e8f0;flex-shrink:0;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--sky),var(--blue));transition:width 0.4s ease;}
+#chat-pane{display:flex;flex-direction:column;flex:1;overflow:hidden;}
+#chat-pane.hidden{display:none;}
+#book-pane{display:none;flex-direction:column;flex:1;overflow-y:auto;background:#f8fafc;min-height:270px;max-height:350px;}
+#book-pane.active{display:flex;}
+.chat-msgs{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:13px;display:flex;flex-direction:column;gap:10px;background:#f8fafc;min-height:270px;max-height:350px;}
+.msg{display:flex;gap:7px;align-items:flex-end;animation:msgIn 0.22s ease;}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.msg.user{flex-direction:row-reverse;}
+.msg-av{width:24px;height:24px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;}
+.msg.agent .msg-av{background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;}
+.msg.user .msg-av{background:var(--accent);color:var(--navy);}
+.msg-bub{max-width:82%;padding:9px 12px;border-radius:14px;font-size:0.84rem;line-height:1.54;}
+.msg.agent .msg-bub{background:#fff;color:var(--text);border:1px solid #e2e8f0;border-bottom-left-radius:3px;box-shadow:0 2px 6px rgba(0,0,0,0.05);}
+.msg.user .msg-bub{background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;border-bottom-right-radius:3px;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px;margin-left:32px;}
+.chip{background:#f0f9ff;border:1.5px solid #bae6fd;color:var(--blue);font-size:0.7rem;font-weight:600;padding:4px 10px;border-radius:100px;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.chip:hover{background:var(--sky);color:#fff;border-color:var(--sky);}
+.typing{display:flex;gap:4px;align-items:center;padding:9px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;border-bottom-left-radius:3px;width:fit-content;}
+.t-dot{width:6px;height:6px;border-radius:50%;background:#94a3b8;animation:tb 1.2s ease infinite;}
+.t-dot:nth-child(2){animation-delay:0.2s;}.t-dot:nth-child(3){animation-delay:0.4s;}
+@keyframes tb{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-4px);background:var(--sky);}}
+.chat-input-area{padding:10px 12px;background:#fff;border-top:1px solid #e2e8f0;flex-shrink:0;display:flex;gap:7px;align-items:flex-end;}
+#chat-input{flex:1;border:1.5px solid #e2e8f0;border-radius:10px;padding:9px 12px;font-family:var(--ff-body);font-size:0.87rem;color:var(--text);outline:none;resize:none;transition:border-color 0.2s;line-height:1.4;max-height:88px;min-height:38px;}
+#chat-input:focus{border-color:var(--sky);}
+#chat-input::placeholder{color:#94a3b8;}
+#chat-send{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--blue));border:none;color:#fff;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform 0.15s;}
+#chat-send:hover:not(:disabled){transform:scale(1.08);}
+#chat-send:disabled{opacity:0.46;cursor:not-allowed;}
+.chat-footer{text-align:center;font-size:0.6rem;color:#94a3b8;padding:5px 12px 8px;background:#fff;flex-shrink:0;}
+.book-step{padding:15px 13px;display:flex;flex-direction:column;gap:11px;animation:msgIn 0.22s ease;}
+.book-step-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--sky);}
+.book-step h4{font-family:var(--ff-head);font-weight:800;font-size:0.98rem;text-transform:uppercase;color:var(--text);margin-bottom:1px;}
+.book-step p{font-size:0.8rem;color:var(--slate);line-height:1.5;}
+.b-field{display:flex;flex-direction:column;gap:4px;}
+.b-label{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);}
+.b-input{border:1.5px solid #e2e8f0;border-radius:7px;padding:8px 11px;font-family:var(--ff-body);font-size:0.87rem;color:var(--text);outline:none;background:#fff;transition:border-color 0.2s;}
+.b-input:focus{border-color:var(--sky);}
+.b-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:32px;}
+.svc-grid-b{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.svc-btn{border:1.5px solid #e2e8f0;border-radius:8px;background:#fff;padding:9px;cursor:pointer;text-align:left;transition:all 0.15s;display:flex;align-items:center;gap:7px;}
+.svc-btn:hover,.svc-btn.selected{border-color:var(--sky);background:#f0f9ff;}
+.svc-btn.selected{box-shadow:0 0 0 2px rgba(14,165,233,0.16);}
+.svc-btn-ico{font-size:14px;flex-shrink:0;}
+.svc-btn span{font-size:0.74rem;font-weight:600;color:var(--text);line-height:1.2;}
+.btn-next{width:100%;background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;border:none;border-radius:7px;padding:10px;font-family:var(--ff-head);font-weight:800;font-size:0.9rem;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s,transform 0.15s;}
+.btn-next:hover{transform:translateY(-1px);}
+.btn-next:disabled{opacity:0.4;cursor:not-allowed;transform:none;}
+.btn-back{background:none;border:1.5px solid #e2e8f0;border-radius:7px;padding:8px;font-family:var(--ff-head);font-weight:700;font-size:0.8rem;color:var(--slate);cursor:pointer;transition:all 0.15s;}
+.btn-back:hover{border-color:var(--slate);color:var(--text);}
+.confirm-card{background:#fff;border:1px solid #e2e8f0;border-radius:9px;padding:12px 14px;font-size:0.82rem;}
+.confirm-row{display:flex;justify-content:space-between;align-items:flex-start;padding:5px 0;border-bottom:1px solid #f1f5f9;gap:8px;}
+.confirm-row:last-child{border-bottom:none;}
+.confirm-row .cl{color:var(--slate);font-size:0.67rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;flex-shrink:0;}
+.confirm-row .cv{font-weight:600;color:var(--text);text-align:right;}
+.success-banner{background:#f0fdf4;border:1.5px solid #86efac;border-radius:10px;padding:17px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px;}
+.success-banner .sico{font-size:1.8rem;color:#16a34a;}
+.success-banner h4{font-family:var(--ff-head);font-weight:800;font-size:1.05rem;text-transform:uppercase;color:var(--text);}
+.success-banner p{font-size:0.78rem;color:var(--slate);line-height:1.5;}
+.ai-msg-box{font-size:0.79rem;color:#334155;line-height:1.5;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;margin-top:3px;transition:all 0.3s;}
+
+/* ── PORTAL MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(4,24,46,0.72);backdrop-filter:blur(5px);z-index:8000;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-card{background:#fff;border-radius:18px;padding:32px;max-width:500px;width:100%;box-shadow:0 36px 72px rgba(0,0,0,0.36);animation:popIn 0.24s cubic-bezier(0.34,1.56,0.64,1);}
+.modal-card h3{font-family:var(--ff-head);font-weight:900;font-size:1.6rem;text-transform:uppercase;color:var(--text);margin-bottom:5px;}
+.modal-card .msub{font-size:0.82rem;color:var(--slate);margin-bottom:22px;}
+.modal-opts{display:flex;flex-direction:column;gap:10px;}
+.modal-opt{display:flex;align-items:center;gap:13px;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:11px;padding:16px;text-decoration:none;transition:all 0.2s;cursor:pointer;}
+.modal-opt:hover{border-color:var(--sky);background:#f0f9ff;transform:translateX(3px);}
+.modal-opt.gold:hover{border-color:var(--accent);background:#fffbeb;}
+.mo-ic{width:44px;height:44px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.mo-text strong{display:block;font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:2px;}
+.mo-text span{font-size:0.76rem;color:var(--slate);}
+.mo-arr{margin-left:auto;color:#cbd5e1;font-size:13px;}
+.modal-opt:hover .mo-arr{color:var(--sky);}
+.modal-opt.gold:hover .mo-arr{color:var(--accent);}
+.modal-close-btn{width:100%;margin-top:14px;background:none;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px;font-family:var(--ff-head);font-weight:700;font-size:0.88rem;color:var(--slate);cursor:pointer;transition:all 0.15s;text-transform:uppercase;letter-spacing:0.04em;}
+.modal-close-btn:hover{border-color:var(--slate);color:var(--text);}
+
+/* ── FOOTER ── */
+footer{background:#020e1c;color:rgba(255,255,255,0.46);padding:30px 5vw;text-align:center;font-size:0.78rem;}
+footer strong{color:rgba(255,255,255,0.76);}
+footer a{color:var(--sky);text-decoration:none;}
+
+/* ── FADE ── */
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — MOBILE-FIRST COMPLETE OVERHAUL
+   ═══════════════════════════════════════════ */
+
+/* ── BASE TOUCH IMPROVEMENTS ── */
+*{-webkit-tap-highlight-color:transparent;}
+input,select,textarea,button{font-size:16px!important;} /* prevent iOS zoom */
+button,a{touch-action:manipulation;}
+
+/* ── TABLET: 768px–1024px ── */
+@media(max-width:1024px){
+  .nav-links{gap:14px;}
+  .nav-links a{font-size:0.78rem;}
+  .about-grid{gap:32px;}
+  .portal-grid{gap:32px;}
+  .contact-grid{gap:32px;}
+  .testi-grid{grid-template-columns:1fr 1fr;}
+  .proc-steps{grid-template-columns:1fr 1fr;gap:1px;}
+  .rpt-kpi-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+/* ── TABLET BREAKPOINT ── */
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:block;}
+  /* Layouts */
+  .about-grid,.contact-grid,.portal-grid{grid-template-columns:1fr;}
+  .testi-grid,.svc-grid{grid-template-columns:1fr 1fr;}
+  .proc-steps{grid-template-columns:1fr 1fr;gap:1px;}
+  .frow{grid-template-columns:1fr;}
+  .rpt-kpi-grid,.cal-stats{grid-template-columns:1fr 1fr;gap:7px;}
+  .photo-grid{grid-template-columns:1fr;}
+  .photo-card.wide{grid-column:span 1;}
+  .photo-card.wide,.photo-card.sq,.photo-card.tall,.photo-card.wide img,.photo-card.sq img,.photo-card.tall img{height:220px;}
+  /* Sections */
+  .sec{padding:52px 5vw;}
+  .svc-wrap,.gal-wrap,.testi-wrap{padding:52px 5vw;}
+  .proc-wrap{padding:52px 5vw;}
+  .rpt-wrap,.cal-wrap{padding:52px 5vw;}
+  .portal-wrap{padding:52px 5vw;}
+  .contact-wrap{padding:52px 5vw;}
+  /* Hero */
+  .hero{padding:60px 5vw 48px;min-height:auto;}
+  .drops-c{width:30%;opacity:0.5;}
+  /* Estimator grid */
+  #est-grid{grid-template-columns:1fr!important;}
+  /* Calendar popup — full width on mobile */
+  .cal-pop{width:calc(100vw - 32px);max-width:320px;}
+  /* Portal modal */
+  .cp-shell{border-radius:16px;}
+  .cp-body{padding:20px 18px;}
+  .cp-tabs{overflow-x:auto;}
+  .cp-tab{font-size:0.62rem;padding:11px 6px;white-space:nowrap;}
+  /* Reports */
+  .rpt-nav{flex-direction:column;align-items:flex-start;}
+  .rpt-table{font-size:0.72rem;display:block;overflow-x:auto;white-space:nowrap;}
+  .rpt-table thead,.rpt-table tbody,.rpt-table tr{display:table-row-group;} /* keep as table */
+  /* Chat widget */
+  #chat-win{width:calc(100vw - 24px);right:12px;bottom:80px;max-height:70vh;}
+}
+
+/* ── MOBILE BREAKPOINT ── */
+@media(max-width:600px){
+  /* Base */
+  :root{--ff-head:'Arial Black','Arial',system-ui,sans-serif;}
+  body{font-size:15px;}
+  .sec{padding:44px 4vw;}
+
+  /* Announce bar */
+  .ann{font-size:0.7rem;flex-direction:column;gap:4px;padding:9px 14px;text-align:center;}
+
+  /* Nav */
+  nav{padding:0 4vw;height:60px;}
+  .nav-logo-main{font-size:0.96rem;}
+  .nav-logo-sub{font-size:0.55rem;}
+
+  /* Mobile menu */
+  .mob-menu{padding:72px 4vw 40px;}
+  .mob-menu a{font-size:1.05rem;padding:16px 0;}
+  .mob-cta .btn-portal,.mob-cta .btn-nav{font-size:0.92rem!important;padding:14px!important;}
+
+  /* Hero */
+  .hero{padding:44px 4vw 40px;min-height:auto;}
+  .hero-logo-row{flex-direction:column;gap:14px;align-items:flex-start;}
+  .hero-badge{font-size:0.62rem;padding:5px 12px;}
+  .hero-title{font-size:clamp(2.2rem,9vw,3rem);line-height:1;margin-bottom:16px!important;}
+  .hero-sub{font-size:0.9rem;margin-bottom:24px!important;}
+  .hero-btns{gap:9px;margin-bottom:32px!important;}
+  .btn-main,.btn-outline,.btn-portal-hero{padding:12px 18px;font-size:0.85rem;}
+  .hero-btns{flex-direction:column;}
+  .btn-main,.btn-outline,.btn-portal-hero{width:100%;justify-content:center;}
+  .hero-vals{flex-direction:column;gap:12px;}
+  .drops-c{display:none;}
+
+  /* Trust bar */
+  .trust-bar{padding:12px 4vw;}
+  .trust-inner{justify-content:flex-start;gap:10px 16px;}
+  .trust-item{flex:0 0 calc(50% - 8px);}
+
+  /* Services */
+  .svc-wrap{padding:44px 4vw;}
+  .svc-grid{grid-template-columns:1fr;}
+  .svc-card{padding:20px;}
+
+  /* About */
+  .about-grid{gap:24px;}
+  .about-img{aspect-ratio:16/9;}
+  .about-stats{grid-template-columns:repeat(3,1fr);}
+  .astat strong{font-size:1.2rem;}
+
+  /* Process */
+  .proc-wrap{padding:44px 4vw;}
+  .proc-steps{grid-template-columns:1fr;}
+
+  /* Gallery */
+  .gal-wrap{padding:44px 4vw;}
+  .photo-card.wide,.photo-card.sq,.photo-card.tall,.photo-card.wide img,.photo-card.sq img,.photo-card.tall img{height:200px;}
+
+  /* Portal section */
+  .portal-wrap{padding:44px 4vw;}
+  .portal-card{padding:22px 18px;}
+  .portal-feats{gap:10px;}
+
+  /* Testimonials */
+  .testi-wrap{padding:44px 4vw;}
+  .testi-grid{grid-template-columns:1fr;}
+  .testi-card{padding:18px;}
+
+  /* Estimator */
+  #estimator{padding:44px 4vw!important;}
+  #estimator>div>div:last-child{padding:22px 16px;}
+
+  /* Contact */
+  .contact-wrap{padding:44px 4vw;}
+  .cform{padding:20px 16px;}
+
+  /* Reports */
+  .rpt-wrap{padding:44px 4vw;}
+  .rpt-kpi-grid{grid-template-columns:1fr 1fr;}
+  .rpt-kpi .kv{font-size:1.2rem;}
+  .rpt-filters{flex-wrap:wrap;gap:4px;}
+  .rbt,.rbt-pdf{padding:5px 8px;font-size:0.58rem;}
+  .rpt-table{font-size:0.68rem;}
+
+  /* Calendar */
+  .cal-wrap{padding:44px 4vw;}
+  .cal-stats{grid-template-columns:1fr 1fr;gap:6px;}
+  .cal-stat .val{font-size:1.4rem;}
+  .cal-day{min-height:46px;padding:4px 3px;}
+  .cal-pill{display:none;}
+  .cal-day.has-job::after{content:'';display:block;width:5px;height:5px;border-radius:50%;background:var(--blue);margin:2px auto 0;}
+  .cal-month{font-size:1.15rem;min-width:160px;}
+  .cal-hdr{flex-direction:column;align-items:flex-start;gap:9px;}
+  .cal-legend{gap:6px;}
+  .cal-leg-item{font-size:0.56rem;padding:2px 6px;}
+
+  /* Calendar popup — full screen bottom sheet on mobile */
+  .cal-pop{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;width:100%!important;max-width:100%!important;border-radius:18px 18px 0 0!important;border-bottom:none!important;padding:20px 18px 32px!important;}
+
+  /* Chat widget */
+  #chat-launcher{width:52px;height:52px;bottom:16px;right:16px;font-size:20px;}
+  #chat-win{width:100vw;right:0;left:0;bottom:0;border-radius:18px 18px 0 0;max-height:82vh;box-shadow:0 -8px 40px rgba(0,0,0,0.22);}
+  #chat-win.open{transform:scale(1) translateY(0);opacity:1;}
+  .chat-msgs,.book-pane,.book-pane.active,.chat-msgs{max-height:calc(82vh - 180px);}
+  #book-pane{max-height:calc(82vh - 180px);}
+
+  /* Client portal */
+  .cp-overlay{padding:0;align-items:flex-end;}
+  .cp-shell{border-radius:24px 24px 0 0;max-width:100%;margin:0;max-height:92vh;overflow-y:auto;}
+  .cp-header{padding:16px 18px;}
+  .cp-header h2{font-size:1.1rem;}
+  .cp-body{padding:16px 14px;min-height:300px;}
+  .cp-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .cp-tab{font-size:0.6rem;padding:11px 8px;flex-shrink:0;}
+  .cp-two-col,.pay-card-row{grid-template-columns:1fr;}
+  .inv-top{flex-direction:column;align-items:flex-start;gap:6px;}
+  .inv-amount{font-size:1.1rem;}
+  .inv-actions{flex-wrap:wrap;}
+  .cp-btn.sm{flex:1;min-width:120px;}
+  .cp-account-banner{flex-direction:row;gap:11px;}
+  .cp-avatar{width:44px;height:44px;font-size:1rem;}
+
+  /* Footer */
+  footer{padding:24px 4vw;font-size:0.72rem;}
+  footer p{margin:4px 0;}
+}
+
+/* ── VERY SMALL SCREENS (≤380px) ── */
+@media(max-width:380px){
+  .hero-title{font-size:clamp(1.9rem,8vw,2.5rem);}
+  .trust-item{flex:0 0 100%;}
+  .svc-grid{grid-template-columns:1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  .cp-tab{font-size:0.56rem;padding:10px 6px;}
+  #chat-win{max-height:88vh;}
+  .cal-pop{padding:16px 14px 28px!important;}
+}
+
+/* ── LARGE SCREENS (≥1400px) ── */
+@media(min-width:1400px){
+  .sec{max-width:1340px;}
+  .hero-inner{max-width:800px;}
+  .portal-grid,.contact-grid,.about-grid{max-width:1340px;margin:0 auto;}
+}
+
+/* ── TOUCH DEVICE IMPROVEMENTS ── */
+@media(hover:none){
+  .btn-main:hover,.btn-outline:hover,.btn-portal-hero:hover{transform:none;}
+  .svc-card:hover{transform:none;}
+  .cal-stat:hover{transform:none;}
+  .portal-opt:hover{transform:none;}
+}
+
+/* ── FULL CLIENT PORTAL ── */
+.cp-overlay{position:fixed;inset:0;background:rgba(4,24,46,0.82);backdrop-filter:blur(8px);z-index:9000;display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.cp-overlay.open{display:flex;}
+.cp-shell{background:#fff;border-radius:20px;width:100%;max-width:720px;box-shadow:0 48px 96px rgba(0,0,0,0.4);animation:popIn 0.26s cubic-bezier(0.34,1.56,0.64,1);margin:auto;overflow:hidden;}
+.cp-header{background:linear-gradient(135deg,var(--navy),#061c35);padding:22px 28px;display:flex;align-items:center;justify-content:space-between;}
+.cp-header h2{font-family:var(--ff-head);font-weight:900;font-size:1.3rem;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:10px;}
+.cp-header-sub{font-size:0.7rem;color:rgba(186,230,253,0.6);margin-top:1px;}
+.cp-close{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:#fff;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;}
+.cp-close:hover{background:rgba(255,255,255,0.2);}
+.cp-tabs{display:flex;background:#f8fafc;border-bottom:2px solid #e2e8f0;}
+.cp-tab{flex:1;padding:13px 8px;font-family:var(--ff-head);font-weight:800;font-size:0.68rem;letter-spacing:0.05em;text-transform:uppercase;color:#94a3b8;cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:4px;}
+.cp-tab.active{color:var(--blue);border-bottom-color:var(--sky);background:#fff;}
+.cp-tab:hover:not(.active){color:var(--slate);background:#f1f5f9;}
+.cp-body{padding:24px 28px;min-height:360px;}
+.cp-account-banner{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.cp-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--blue));display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-weight:900;font-size:1.2rem;color:#fff;flex-shrink:0;}
+.cp-account-name{font-family:var(--ff-head);font-weight:800;font-size:1.1rem;color:var(--text);}
+.cp-account-meta{font-size:0.73rem;color:var(--slate);margin-top:2px;}
+.cp-field{margin-bottom:13px;}
+.cp-label{display:block;font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--slate);margin-bottom:5px;}
+.cp-input{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:11px 13px;font-family:var(--ff-body);font-size:0.9rem;color:var(--text);outline:none;background:#f8fafc;transition:all 0.2s;}
+.cp-input:focus{border-color:var(--sky);background:#fff;box-shadow:0 0 0 3px rgba(14,165,233,0.1);}
+.cp-btn{width:100%;background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;border:none;border-radius:9px;padding:12px;font-family:var(--ff-head);font-weight:800;font-size:0.92rem;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;box-shadow:0 5px 16px rgba(14,165,233,0.25);display:flex;align-items:center;justify-content:center;gap:7px;}
+.cp-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(14,165,233,0.35);}
+.cp-btn.gold{background:linear-gradient(135deg,var(--accent),#d97706);box-shadow:0 5px 16px rgba(245,158,11,0.28);}
+.cp-btn.gold:hover{box-shadow:0 8px 22px rgba(245,158,11,0.38);}
+.cp-btn.outline{background:#fff;color:var(--blue);border:1.5px solid var(--sky);box-shadow:none;}
+.cp-btn.outline:hover{background:#f0f9ff;}
+.cp-btn.danger{background:#fff;color:#ef4444;border:1.5px solid #fca5a5;box-shadow:none;font-size:0.76rem;}
+.cp-btn.danger:hover{background:#fef2f2;}
+.cp-btn.sm{padding:8px 14px;font-size:0.72rem;width:auto;flex-shrink:0;}
+.cp-toggle{text-align:center;margin-top:14px;font-size:0.78rem;color:var(--slate);}
+.cp-toggle a{color:var(--blue);cursor:pointer;font-weight:700;text-decoration:none;}
+.cp-toggle a:hover{color:var(--sky);}
+.inv-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-bottom:10px;transition:all 0.2s;}
+.inv-card:hover{border-color:#bae6fd;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+.inv-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.inv-id{font-family:var(--ff-head);font-weight:800;font-size:0.96rem;color:var(--text);}
+.inv-amount{font-family:var(--ff-head);font-weight:900;font-size:1.3rem;color:var(--navy);}
+.inv-meta{font-size:0.72rem;color:var(--slate);margin-top:4px;}
+.inv-badge{font-size:0.58rem;font-weight:800;padding:3px 9px;border-radius:100px;text-transform:uppercase;letter-spacing:0.07em;border:1px solid transparent;}
+.inv-badge.unpaid{background:rgba(245,158,11,0.12);color:#b45309;border-color:rgba(245,158,11,0.3);}
+.inv-badge.paid{background:rgba(16,185,129,0.12);color:#047857;border-color:rgba(16,185,129,0.3);}
+.inv-badge.overdue{background:rgba(239,68,68,0.12);color:#b91c1c;border-color:rgba(239,68,68,0.3);}
+.inv-actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;}
+.pay-form{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:12px;padding:18px;margin-top:12px;display:none;}
+.pay-form.open{display:block;animation:msgIn 0.2s ease;}
+.pay-card-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.pay-secure-note{display:flex;align-items:center;gap:6px;font-size:0.68rem;color:#64748b;margin-top:10px;padding:8px 11px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:7px;}
+.job-card{background:#fff;border:1px solid #e2e8f0;border-radius:11px;padding:14px 16px;margin-bottom:9px;display:flex;align-items:center;gap:13px;transition:all 0.2s;}
+.job-card:hover{border-color:#bae6fd;box-shadow:0 4px 14px rgba(0,0,0,0.06);}
+.job-icon{width:40px;height:40px;border-radius:9px;background:#f0f9ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.job-info{flex:1;}
+.job-svc{font-weight:700;font-size:0.88rem;color:var(--text);}
+.job-meta{font-size:0.7rem;color:var(--slate);margin-top:2px;}
+.cp-section-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--sky);margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.cp-section-lbl::after{content:'';flex:1;height:1px;background:#e2e8f0;}
+.cp-two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.cp-alert{border-radius:9px;padding:11px 14px;font-size:0.8rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.cp-alert.success{background:#f0fdf4;border:1px solid #86efac;color:#15803d;}
+.cp-alert.error{background:#fef2f2;border:1px solid #fca5a5;color:#b91c1c;}
+.cp-alert.info{background:#f0f9ff;border:1px solid #bae6fd;color:#0369a1;}
+.cp-empty{text-align:center;padding:40px 20px;color:var(--slate);}
+.cp-empty .emp-ico{font-size:2.5rem;margin-bottom:10px;}
+.cp-empty p{font-size:0.88rem;line-height:1.6;}
+.cp-logout-row{display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid #e2e8f0;}
+@media(max-width:600px){.cp-two-col,.pay-card-row{grid-template-columns:1fr;}.cp-body{padding:18px 16px;}.cp-tab{font-size:0.6rem;padding:11px 5px;}}
+
+/* ── SKIP LINK (accessibility) ── */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+.skip-link:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;padding:10px 18px;background:var(--sky);color:#fff;font-weight:700;font-size:0.9rem;border-radius:8px;z-index:99999;text-decoration:none;outline:3px solid #fff;}
+
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Reusable inline SVG logo definition -->
+<svg width="0" height="0" style="position:absolute;overflow:hidden;" aria-hidden="true">
+  <defs>
+    <!-- ── GRADIENTS ── -->
+    <radialGradient id="bgGrad" cx="40%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#1a5faa"/>
+      <stop offset="100%" stop-color="#0b2e6e"/>
+    </radialGradient>
+    <linearGradient id="splashGrad" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#c8ecff" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#7dcef5" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#3aace8" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="splashInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f8ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#a8dff5" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00184a" flood-opacity="0.7"/>
+    </filter>
+    <filter id="splashGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="wideClip">
+      <rect x="0" y="0" width="320" height="220" rx="24"/>
+    </clipPath>
+
+    <!-- 500x500 viewBox — text stacked 3 rows, all inside circle -->
+    <symbol id="ks-logo-sym" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="circleClip"><circle cx="250" cy="250" r="244"/></clipPath>
+      </defs>
+
+      <!-- Background -->
+      <circle cx="250" cy="250" r="247" fill="url(#bgGrad)"/>
+      <circle cx="250" cy="250" r="244" fill="none" stroke="#2a7fd4" stroke-width="3"/>
+
+      <!-- Water splash arc — right side, clipped -->
+      <g clip-path="url(#circleClip)" filter="url(#splashGlow)">
+        <path d="M 360 18 C 436 40 492 138 492 250 C 492 362 436 460 360 482
+                 C 400 444 422 352 422 250 C 422 148 400 56 360 18 Z"
+              fill="url(#splashGrad)" opacity="0.9"/>
+        <path d="M 376 34 C 444 64 478 156 476 250 C 474 344 440 434 380 464
+                 C 412 428 432 344 430 250 C 428 156 406 72 376 34 Z"
+              fill="url(#splashInner)" opacity="0.65"/>
+        <path d="M 364 22 C 448 54 492 152 490 252 C 488 350 442 442 368 478"
+              fill="none" stroke="rgba(220,245,255,0.55)" stroke-width="5" stroke-linecap="round"/>
+        <!-- Top droplets -->
+        <ellipse cx="258" cy="8"   rx="7" ry="11"  fill="rgba(190,235,255,0.85)" transform="rotate(-5 258 8)"/>
+        <ellipse cx="292" cy="13"  rx="6" ry="9"   fill="rgba(180,230,255,0.78)" transform="rotate(14 292 13)"/>
+        <ellipse cx="322" cy="24"  rx="5" ry="7.5" fill="rgba(175,228,255,0.7)"  transform="rotate(26 322 24)"/>
+        <ellipse cx="224" cy="8"   rx="4" ry="7"   fill="rgba(185,232,255,0.6)"  transform="rotate(-18 224 8)"/>
+        <!-- Right droplets -->
+        <circle  cx="494" cy="182" r="6.5" fill="rgba(190,235,255,0.65)"/>
+        <circle  cx="498" cy="250" r="5"   fill="rgba(190,235,255,0.55)"/>
+        <ellipse cx="494" cy="318" rx="6" ry="9"   fill="rgba(180,230,255,0.6)" transform="rotate(12 494 318)"/>
+        <!-- Bottom droplets -->
+        <ellipse cx="284" cy="493" rx="6.5" ry="10" fill="rgba(175,228,255,0.75)" transform="rotate(-8 284 493)"/>
+        <ellipse cx="322" cy="490" rx="5"   ry="8"  fill="rgba(175,228,255,0.62)"/>
+        <!-- Left droplets -->
+        <ellipse cx="10" cy="198" rx="5" ry="9"   fill="rgba(180,230,255,0.65)" transform="rotate(-38 10 198)"/>
+        <ellipse cx="6"  cy="250" rx="4" ry="7"   fill="rgba(180,230,255,0.5)"/>
+        <ellipse cx="12" cy="302" rx="5" ry="8.5" fill="rgba(180,230,255,0.6)"  transform="rotate(30 12 302)"/>
+      </g>
+
+      <!-- Pressure wand — lower right quadrant -->
+      <path d="M 130 388 Q 198 412 264 396" fill="none" stroke="#7dcef5" stroke-width="6" stroke-linecap="round" opacity="0.82"/>
+      <rect x="258" y="383" width="40" height="17" rx="8"  fill="#a8dff5" transform="rotate(-20 258 383)" opacity="0.9"/>
+      <rect x="292" y="366" width="50" height="10" rx="5"  fill="#c8ecff" transform="rotate(-20 292 366)" opacity="0.9"/>
+      <line x1="337" y1="349" x2="364" y2="328" stroke="rgba(200,240,255,0.84)" stroke-width="3"   stroke-linecap="round"/>
+      <line x1="343" y1="343" x2="371" y2="328" stroke="rgba(200,240,255,0.66)" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="349" y1="337" x2="376" y2="328" stroke="rgba(200,240,255,0.48)" stroke-width="2"   stroke-linecap="round"/>
+
+      <!-- ── TEXT: 3 rows, each centred, sized to fit chord width ── -->
+
+      <!-- Row 1: "KS" — very large, centred -->
+      <text x="250" y="168"
+            text-anchor="middle"
+            font-family="'Arial Black',Arial,sans-serif"
+            font-weight="900" font-size="148" font-style="italic"
+            fill="#ffffff" filter="url(#textShadow)" letter-spacing="-4">KS</text>
+
+      <!-- Row 2: "Power" — centred -->
+      <text x="250" y="286"
+            text-anchor="middle"
+            font-family="'Arial Black',Arial,sans-serif"
+            font-weight="900" font-size="110" font-style="italic"
+            fill="#ffffff" filter="url(#textShadow)" letter-spacing="-2">Power</text>
+
+      <!-- Row 3: "Washing" — sky blue, centred -->
+      <text x="250" y="388"
+            text-anchor="middle"
+            font-family="Arial,Helvetica,sans-serif"
+            font-weight="700" font-size="88" font-style="italic"
+            fill="#f59e0b" filter="url(#textShadow)" letter-spacing="3">Washing</text>
+
+      <!-- Inner glow ring -->
+      <circle cx="250" cy="250" r="243" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="12"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="ann">
+  <span>&#128179;</span>
+  Now Accepting Credit and Debit Card Payments!
+  &nbsp;&bull;&nbsp;
+  <a href="#portal" onclick="cpOpen()">Client Portal: Schedule &amp; Pay Online &#8594;</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="ks-logo-wrap nav-logo">
+    <svg style="height:52px;width:52px;flex-shrink:0;" viewBox="0 0 500 500"><use href="#ks-logo-sym"/></svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reports">Reports</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="tel:3166806549" class="nav-phone"><span class="ico" style="line-height:0;"><!--phone--></span> (316) 680-6549</a>
+    <button class="btn-portal" type="button" onclick="cpOpen()"><span class="ico" style="line-height:0;"><!--portal--></span> Client Portal</button>
+    <a href="#estimator" class="btn-nav"><span class="ico" style="line-height:0;"><!--calendar--></span> Free Estimate</a>
+  </div>
+  <button class="hamburger" id="hamburger-btn" type="button" aria-expanded="false" aria-controls="mob-menu" aria-label="Open navigation menu" onclick="toggleMob()">&#9776;</button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mob-menu">
+  <button class="mob-close" type="button" aria-label="Close navigation menu" onclick="toggleMob()">&#10005;</button>
+  <a href="#home" onclick="toggleMob()">Home</a>
+  <a href="#services" onclick="toggleMob()">Services</a>
+  <a href="#about" onclick="toggleMob()">About</a>
+  <a href="#gallery" onclick="toggleMob()">Gallery</a>
+  <a href="#contact" onclick="toggleMob()">Contact</a>
+  <a href="#reports" onclick="toggleMob()">Reports</a>
+  <a href="#schedule" onclick="toggleMob()">Schedule</a>
+  <div class="mob-cta">
+    <button class="btn-portal" onclick="toggleMob();openPortal();" style="width:100%;padding:11px;">&#9881; Client Portal</button>
+    <a href="tel:3166806549" class="btn-nav" style="text-align:center;display:block;padding:11px;">&#128222; (316) 680-6549</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="drops-c" id="drops-c"></div>
+  <div class="hero-inner fade-up">
+    <div class="hero-logo-row fade-up-child">
+      <svg style="width:min(90px,20vw);height:min(90px,20vw);flex-shrink:0;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.5));" viewBox="0 0 500 500"><use href="#ks-logo-sym"/></svg>
+      <div>
+        <div class="hero-badge">&#128205; Wichita, Kansas &mdash; Locally Owned &amp; Operated</div>
+        <h1 class="hero-title" style="margin-bottom:0;">Wichita's<br><span class="sky">Premier</span><br>Power Washing</h1>
+      </div>
+    </div>
+    <p class="hero-sub">KS Power Washing LLC takes pride in treating your property as our own. Deck washing, driveway cleaning, patio washing, exterior soft wash, and so much more.</p>
+    <div class="hero-btns">
+      <a href="#estimator" class="btn-main">&#128197; Free Estimate</a>
+      <button class="btn-portal-hero" type="button" onclick="cpOpen()">&#9881; Client Portal</button>
+      <a href="tel:3166806549" class="btn-outline">&#128222; (316) 680-6549</a>
+    </div>
+    <div class="hero-vals">
+      <div class="hero-val"><div class="hv-ic" id="hv0"></div><div><strong>Affordable Pricing</strong><span>No hidden fees</span></div></div>
+      <div class="hero-val"><div class="hv-ic" id="hv1"></div><div><strong>Great Customer Service</strong><span>Clear communication</span></div></div>
+      <div class="hero-val"><div class="hv-ic" id="hv2"></div><div><strong>Friendly Staff</strong><span>Local team you trust</span></div></div>
+      <div class="hero-val"><div class="hv-ic" id="hv3"></div><div><strong>Cards Accepted</strong><span>Credit &amp; debit</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-icon" id="ti0"></div><div class="trust-text"><strong>Fully Insured</strong><span>Licensed &amp; Professional</span></div></div>
+    <div class="trust-item"><div class="trust-icon" id="ti1"></div><div class="trust-text"><strong>Eco-Safe Chemicals</strong><span>Safe for plants &amp; pets</span></div></div>
+    <div class="trust-item"><div class="trust-icon" id="ti2"></div><div class="trust-text"><strong>Mon&ndash;Fri 8am&ndash;6pm</strong><span>Prompt scheduling</span></div></div>
+    <div class="trust-item"><div class="trust-icon" id="ti3"></div><div class="trust-text"><strong>Cards Accepted</strong><span>Credit &amp; debit</span></div></div>
+    <div class="trust-item"><div class="trust-icon" id="ti4"></div><div class="trust-text"><strong>Wichita &amp; Beyond</strong><span>Surrounding KS cities</span></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="svc-wrap" id="services">
+  <div class="sec">
+    <div class="sec-head center fade-up">
+      <div class="sec-lbl">Expert Service Offerings</div>
+      <h2 class="sec-title">What We Clean</h2>
+      <p class="sec-sub">High-pressure and soft-wash techniques with eco-friendly chemicals to eliminate algae, moss, mildew, and embedded grime &mdash; matched precisely to each surface type.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card fade-up"><div class="svc-icon">&#127968;</div><h3>Exterior Washing</h3><p>Soft-washing with friendly chemicals removes mildew, algae, and cobwebs leaving your home looking new again. Call for a free estimate today!</p><div class="svc-tag">&#8594; Residential &amp; Commercial</div></div>
+      <div class="svc-card fade-up" style="transition-delay:0.07s"><div class="svc-icon">&#128167;</div><h3>Pressure Washing</h3><p>High-pressure water combined with environmentally safe chemicals eliminates algae, moss, mildew, and stuck-on dirt from buildings and cement surfaces throughout Kansas.</p><div class="svc-tag">&#8594; All Surface Types</div></div>
+      <div class="svc-card fade-up" style="transition-delay:0.14s"><div class="svc-icon">&#128663;</div><h3>Driveways &amp; Patios</h3><p>Our team uses the latest equipment to clean your driveway quickly and thoroughly, leaving it looking like new. Contact us today for a free quote!</p><div class="svc-tag">&#8594; Concrete Restoration</div></div>
+      <div class="svc-card fade-up" style="transition-delay:0.21s"><div class="svc-icon">&#127795;</div><h3>Deck Washing</h3><p>Removes algae, mildew, and moss from your deck. Regular professional cleaning extends your deck's life expectancy and saves money on costly repairs.</p><div class="svc-tag">&#8594; Wood &amp; Composite</div></div>
+      <div class="svc-card fade-up" style="transition-delay:0.28s"><div class="svc-icon">&#127970;</div><h3>Commercial Exterior</h3><p>Full-building envelope cleaning for warehouses, storefronts, and commercial facilities. Professional results protecting your business's curb appeal and market value.</p><div class="svc-tag">&#8594; Business Properties</div></div>
+      <div class="svc-card fade-up" style="transition-delay:0.35s"><div class="svc-icon">&#9749;</div><h3>Patio Washing</h3><p>Targeted cleaning for concrete, brick, and stone patios. We remove algae, moss, and seasonal weathering without harming your surrounding landscaping.</p><div class="svc-tag">&#8594; Outdoor Living</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ESTIMATOR -->
+<div style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));padding:76px 5vw;" id="estimator">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;" id="est-grid">
+    <div class="fade-up">
+      <div class="sec-lbl" style="color:var(--sky)">Fair &amp; Transparent Pricing</div>
+      <h2 class="sec-title" style="color:#fff">Instant Project Estimator</h2>
+      <p class="sec-sub" style="color:rgba(186,230,253,0.78)">No hidden fees. Ballpark your project, then call or use the Client Portal to confirm and pay.</p>
+      <ul style="list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:10px;">
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(186,230,253,0.84);font-size:0.9rem;"><span style="color:var(--sky);font-weight:800;flex-shrink:0;">&#10003;</span>Eco-safe chemical surcharges included</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(186,230,253,0.84);font-size:0.9rem;"><span style="color:var(--sky);font-weight:800;flex-shrink:0;">&#10003;</span>No surprise fees &mdash; transparent pricing always</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(186,230,253,0.84);font-size:0.9rem;"><span style="color:var(--sky);font-weight:800;flex-shrink:0;">&#10003;</span>Pay by cash, credit, or debit card</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(186,230,253,0.84);font-size:0.9rem;"><span style="color:var(--sky);font-weight:800;flex-shrink:0;">&#10003;</span>Final quote confirmed on-property walkthrough</li>
+      </ul>
+    </div>
+    <div style="background:#fff;border-radius:16px;padding:30px;box-shadow:0 32px 64px rgba(0,0,0,0.26);" class="fade-up">
+      <h4 style="font-family:var(--ff-head);font-weight:900;font-size:1.3rem;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:8px;">Project Calculator <span style="font-size:0.56rem;font-weight:800;background:#fef3c7;color:#92400e;padding:2px 7px;border-radius:100px;">Beta</span></h4>
+      <p style="font-size:0.78rem;color:var(--slate);margin-bottom:20px;">Select surface and enter size for an instant range estimate.</p>
+      <div class="fg"><label class="fl" for="est-svc">Target Surface</label><select id="est-svc" class="fc" onchange="calcEst()"><option value="0.20" data-unit="sqft">Concrete Driveway / Flatwork</option><option value="0.15" data-unit="sqft">Residential House Siding</option><option value="0.30" data-unit="sqft">Roof Shingles (Soft Wash)</option><option value="1.50" data-unit="lnft">Gutter Cleaning (per lin ft)</option><option value="0.45" data-unit="sqft">Deck / Patio / Fence</option><option value="0.35" data-unit="sqft">Commercial Exterior</option></select></div>
+      <div class="fg"><label class="fl" id="est-sz-lbl" for="est-sz">Area Size (Square Feet)</label><input type="number" id="est-sz" class="fc" placeholder="e.g. 500" oninput="calcEst()" min="0"></div>
+      <div class="fg"><label class="fl" for="est-soil">Soil Level</label><select id="est-soil" class="fc" onchange="calcEst()"><option value="1.0">Normal &mdash; Standard accumulation</option><option value="1.25">Moderate &mdash; Visible staining or algae</option><option value="1.5">Heavy &mdash; Deep stains, significant mold</option></select></div>
+      <div style="background:#f0f9ff;border:1.5px solid #bae6fd;border-radius:10px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;margin:18px 0 14px;">
+        <div><div style="font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);">Estimated Range</div><div id="est-out" style="font-family:var(--ff-head);font-weight:900;font-size:1.9rem;color:var(--navy);">--</div><div id="est-note" style="font-size:0.68rem;color:var(--slate);">Enter area above</div></div>
+        <span style="font-size:2rem;">&#128200;</span>
+      </div>
+      <a href="tel:3166806549" class="btn-cta" style="display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;margin-bottom:9px;">&#128222; Call: (316) 680-6549</a>
+      <button class="btn-cta" type="button" onclick="cpOpen()" style="background:linear-gradient(135deg,var(--accent),#d97706);box-shadow:0 5px 16px rgba(245,158,11,0.26);">&#9881; Schedule via Client Portal</button>
+      <p style="font-size:0.65rem;color:#94a3b8;text-align:center;margin-top:9px;">Estimates are non-binding. Final price confirmed on walkthrough.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="about-img" style="background:linear-gradient(135deg,#04182e,#0a2847);">
+          <svg style="width:200px;height:200px;filter:drop-shadow(0 8px 28px rgba(0,0,0,0.6));" viewBox="0 0 500 500"><use href="#ks-logo-sym"/></svg>
+          <p style="margin-top:6px;font-size:0.75rem;letter-spacing:0.12em;">Insured &amp; Bonded &mdash; Wichita, KS</p>
+          <div class="about-stats">
+            <div class="astat"><strong>2022</strong><span>Founded</span></div>
+            <div class="astat"><strong>5&#9733;</strong><span>Rated</span></div>
+            <div class="astat"><strong>KS</strong><span>Registered</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.1s">
+        <div class="sec-lbl">Who We Are</div>
+        <h2 class="sec-title">Rooted in Wichita,<br>Built on Trust</h2>
+        <p class="sec-sub">KS Power Washing, LLC is a locally owned and operated pressure washing company in Wichita, KS that takes pride in treating your property as our own. We are committed to excellence in every aspect of our business and accurate knowledge of our trade combined with ability is what makes us true professionals. We offer a variety of services such as deck washing, driveway cleaning, patio washing, and so much more. Call today!</p>
+        <div class="about-mission">
+          <h5>Our Mission</h5>
+          <p>To treat every client's property with the same care and attention as if it were our own.</p>
+        </div>
+        <div class="about-vals">
+          <div class="about-val"><div class="av-ic">&#128179;</div><div><h5>Affordable Pricing</h5><p>High-value results that respect both professional and household budgets &mdash; no surprises, no hidden fees.</p></div></div>
+          <div class="about-val"><div class="av-ic">&#10084;</div><div><h5>Great Customer Service</h5><p>Clear, proactive communication at every stage with an unwavering commitment to complete client satisfaction.</p></div></div>
+          <div class="about-val"><div class="av-ic">&#128101;</div><div><h5>Friendly, Knowledgeable Staff</h5><p>Approachable professionals who take time to understand your property's specific needs every time.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<div class="proc-wrap">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="sec-head fade-up" style="padding:0;">
+      <div class="sec-lbl" style="color:var(--sky)">How It Works</div>
+      <h2 class="sec-title" style="color:#fff">4 Simple Steps</h2>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step fade-up"><div class="step-n">01</div><div class="step-ic">&#128222;</div><h4>Request a Free Estimate</h4><p>Contact us by phone or email for a no-obligation quote tailored to your property.</p></div>
+      <div class="proc-step fade-up" style="transition-delay:0.08s"><div class="step-n">02</div><div class="step-ic">&#128197;</div><h4>Schedule Your Service</h4><p>We coordinate a time that works for you. Use the Client Portal or call us directly Mon&ndash;Fri 8am&ndash;6pm.</p></div>
+      <div class="proc-step fade-up" style="transition-delay:0.16s"><div class="step-n">03</div><div class="step-ic">&#128167;</div><h4>Professional Cleaning</h4><p>Our team arrives, completes the job with precision and care, and walks results with you before we leave.</p></div>
+      <div class="proc-step fade-up" style="transition-delay:0.24s"><div class="step-n">04</div><div class="step-ic">&#128179;</div><h4>Pay With Ease</h4><p>Settle your invoice with cash, credit, or debit card &mdash; whichever is most convenient for you.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gal-wrap" id="gallery">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="sec-head center fade-up" style="padding:0;margin-bottom:32px;">
+      <div class="sec-lbl">Our Work</div>
+      <h2 class="sec-title">Real Results in Wichita</h2>
+      <p class="sec-sub">Every job completed with the care and precision you deserve. Real photos from KS Power Washing projects across the Wichita metro.</p>
+    </div>
+    <div class="photo-grid fade-up" id="photo-grid"></div>
+    <p style="text-align:center;margin-top:18px;font-size:0.78rem;color:var(--slate);">
+      See more at: <a href="https://kspowerwashing.com" target="_blank" rel="noopener noreferrer" style="color:var(--sky);font-weight:700;">kspowerwashing.com</a>
+    </p>
+  </div>
+</div>
+
+<!-- CLIENT PORTAL SECTION -->
+<div class="portal-wrap" id="portal">
+  <div class="portal-grid">
+    <div class="portal-left fade-up">
+      <div class="sec-lbl" style="color:var(--accent)">New Feature</div>
+      <h2 class="sec-title">Client Portal</h2>
+      <p class="sec-sub">Manage appointments and invoices online &mdash; 24/7 access from any device.</p>
+      <div class="portal-feats">
+        <div class="portal-feat"><div class="pf-ic">&#128197;</div><div class="pf-text"><strong>Schedule Appointments</strong><span>Book your next cleaning anytime, day or night</span></div></div>
+        <div class="portal-feat"><div class="pf-ic">&#128176;</div><div class="pf-text"><strong>View &amp; Pay Invoices</strong><span>Securely pay by credit or debit card online</span></div></div>
+        <div class="portal-feat"><div class="pf-ic">&#128338;</div><div class="pf-text"><strong>Service History</strong><span>Review past jobs and upcoming bookings</span></div></div>
+        <div class="portal-feat"><div class="pf-ic">&#128276;</div><div class="pf-text"><strong>Appointment Reminders</strong><span>Automatic notifications so you're always prepared</span></div></div>
+      </div>
+    </div>
+    <div class="portal-card fade-up" style="transition-delay:0.1s">
+      <h4>Access Your Portal</h4>
+      <p class="psub">Schedule appointments and pay invoices securely online.</p>
+      <div class="portal-opts">
+        <div class="portal-opt" onclick="cpOpen();cpTab('schedule')">
+          <div class="po-ic blue">&#128197;</div>
+          <div class="po-text"><strong>Schedule an Appointment</strong><span>Book a new cleaning service online</span></div>
+          <span class="po-arr">&#8250;</span>
+        </div>
+        <div class="portal-divider">or</div>
+        <div class="portal-opt gold" onclick="cpOpen();cpTab('invoices')">
+          <div class="po-ic amber">&#128176;</div>
+          <div class="po-text"><strong>View &amp; Pay Invoice</strong><span>Securely pay by credit or debit card</span></div>
+          <span class="po-arr">&#8250;</span>
+        </div>
+        <div class="portal-opt" onclick="switchTab('book');if(!chatOpen)toggleChat();" style="background:#f0f9ff;border-color:#bae6fd;">
+          <div class="po-ic" style="background:rgba(14,165,233,0.1);color:var(--sky);">&#129302;</div>
+          <div class="po-text"><strong>Book via AI Assistant</strong><span>Use our chat widget to schedule quickly</span></div>
+          <span class="po-arr">&#8250;</span>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:14px;font-size:0.72rem;color:var(--slate);">
+        &#128274; Secure &amp; encrypted &nbsp;&bull;&nbsp; &#128179; Credit &amp; debit accepted
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-wrap">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="sec-head center fade-up" style="padding:0;margin-bottom:40px;">
+      <div class="sec-lbl">Customer Reviews</div>
+      <h2 class="sec-title">What Wichita Says</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-up"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">"KS Power Washing transformed our driveway &mdash; years of oil stains completely gone. Professional from start to finish and great communication throughout."</p><div class="testi-author"><div class="testi-av">MR</div><div><div class="testi-name">Mark R.</div><div class="testi-loc">East Wichita &mdash; Driveway Restoration</div></div></div></div>
+      <div class="testi-card fade-up" style="transition-delay:0.08s"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">"Used them for our warehouse exterior. They set up containment, cleaned every panel, and left zero mess. Will use again for our spring contract."</p><div class="testi-author"><div class="testi-av">ST</div><div><div class="testi-name">Sandra T.</div><div class="testi-loc">NW Wichita &mdash; Commercial Facility</div></div></div></div>
+      <div class="testi-card fade-up" style="transition-delay:0.16s"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">"My deck looked brand new. Safe for my dogs, done in one morning, friendly staff and affordable pricing. Highly recommend!"</p><div class="testi-author"><div class="testi-av">JL</div><div><div class="testi-name">Jennifer L.</div><div class="testi-loc">Derby, KS &mdash; Deck &amp; Patio</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-wrap" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left fade-up">
+      <div class="sec-lbl" style="color:var(--sky)">Get In Touch</div>
+      <h2 class="sec-title">Secure Your Property's Value</h2>
+      <p class="sec-sub">KS Power Washing LLC delivers expert results with the care and accountability only a locally owned Wichita company can provide.</p>
+      <div class="contact-methods">
+        <a href="tel:3166806549" class="contact-method"><div class="cm-ic">&#128222;</div><div><div class="cm-lbl">Phone / Text</div><div class="cm-val">(316) 680-6549</div></div></a>
+        <a href="mailto:kspowerwashingllc@gmail.com" class="contact-method"><div class="cm-ic">&#9993;</div><div><div class="cm-lbl">Email</div><div class="cm-val">kspowerwashingllc@gmail.com</div></div></a>
+        <div class="contact-method"><div class="cm-ic">&#128336;</div><div><div class="cm-lbl">Business Hours</div><div class="cm-val">Mon&ndash;Fri: 8am &ndash; 6pm</div></div></div>
+        <div class="contact-method"><div class="cm-ic">&#128205;</div><div><div class="cm-lbl">Service Area</div><div class="cm-val">Wichita, KS &amp; Surrounding Kansas Cities</div></div></div>
+        <div class="contact-method" onclick="cpOpen()" style="cursor:pointer;border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.06);"><div class="cm-ic" style="background:rgba(245,158,11,0.12);color:var(--accent);">&#9881;</div><div><div class="cm-lbl" style="color:var(--accent)">Client Portal</div><div class="cm-val">Schedule &amp; Pay Online</div></div></div>
+      </div>
+    </div>
+    <div class="cform fade-up" style="transition-delay:0.1s">
+      <h4>Send Us a Message</h4>
+      <p class="sub">Fill out your details and we will reach out within 24 hours.</p>
+      <div class="frow">
+        <div class="fg"><label class="fl" for="cf-fname">First Name</label><input type="text" id="cf-fname" name="fname" class="fc" placeholder="Jane" autocomplete="given-name"></div>
+        <div class="fg"><label class="fl" for="cf-lname">Last Name</label><input type="text" id="cf-lname" name="lname" class="fc" placeholder="Smith" autocomplete="family-name"></div>
+      </div>
+      <div class="fg"><label class="fl" for="cf-email">Email</label><input type="email" id="cf-email" name="email" class="fc" placeholder="jane@example.com" autocomplete="email"></div>
+      <div class="fg"><label class="fl" for="cf-phone">Phone</label><input type="tel" id="cf-phone" name="phone" class="fc" placeholder="(316) 555-0000" autocomplete="tel"></div>
+      <div class="fg"><label class="fl" for="cf-subject">Subject</label><input type="text" id="cf-subject" name="subject" class="fc" placeholder="Driveway cleaning quote"></div>
+      <div class="fg"><label class="fl" for="cf-message">Message</label><textarea id="cf-message" name="message" class="fc" placeholder="Describe your project..."></textarea></div>
+      <button class="btn-cta" type="button" onclick="submitCF(this)">&#128228; Send</button>
+    </div>
+  </div>
+</div>
+
+<!-- REPORTS -->
+<div class="rpt-wrap" id="reports">
+  <div class="cal-inner">
+    <div class="sec-head fade-up" style="padding:0;margin-bottom:28px;">
+      <div class="sec-lbl" style="color:var(--sky)">Business Intelligence</div>
+      <h2 class="sec-title" style="color:#fff">Weekly Appointment Reports</h2>
+      <p class="sec-sub" style="color:rgba(186,230,253,0.7)">Auto-generated from your booking database.</p>
+    </div>
+    <div id="rpt-content" class="fade-up"></div>
+  </div>
+</div>
+
+<!-- CALENDAR -->
+<div class="cal-wrap" id="schedule">
+  <div class="cal-inner">
+    <div class="sec-head fade-up" style="padding:0;margin-bottom:22px;">
+      <div class="sec-lbl" style="color:var(--sky)">Availability &amp; Schedule</div>
+      <h2 class="sec-title" style="color:#fff">Monthly Bookings</h2>
+      <p class="sec-sub" style="color:rgba(186,230,253,0.7)">Click any booking to see details. New requests appear after booking.</p>
+    </div>
+    <div class="cal-hdr fade-up">
+      <div class="cal-nav-row">
+        <button class="cal-nb" type="button" aria-label="Previous month" onclick="calNav(-1)">&#8249;</button>
+        <div class="cal-month" id="cal-month" aria-live="polite">Loading...</div>
+        <button class="cal-nb" type="button" aria-label="Next month" onclick="calNav(1)">&#8250;</button>
+      </div>
+      <div class="cal-legend">
+        <div class="cal-leg-item"><div class="cal-dot" style="background:#0ea5e9;"></div>Confirmed</div>
+        <div class="cal-leg-item"><div class="cal-dot" style="background:#f59e0b;"></div>Pending</div>
+        <div class="cal-leg-item"><div class="cal-dot" style="background:#10b981;"></div>Completed</div>
+        <div class="cal-leg-item"><div class="cal-dot" style="background:#a855f7;"></div>New</div>
+      </div>
+    </div>
+    <div class="cal-grid-wrap fade-up">
+      <div class="cal-dow-row"><div class="cal-dow">Sun</div><div class="cal-dow">Mon</div><div class="cal-dow">Tue</div><div class="cal-dow">Wed</div><div class="cal-dow">Thu</div><div class="cal-dow">Fri</div><div class="cal-dow">Sat</div></div>
+      <div class="cal-days" id="cal-days"></div>
+    </div>
+    <div class="cal-stats">
+      <div class="cal-stat"><div class="val" id="s-total">0</div><div class="lbl">Total Jobs</div></div>
+      <div class="cal-stat"><div class="val" id="s-conf">0</div><div class="lbl">Confirmed</div></div>
+      <div class="cal-stat"><div class="val" id="s-pend">0</div><div class="lbl">Pending</div></div>
+      <div class="cal-stat"><div class="val" id="s-open">0</div><div class="lbl">Open Days</div></div>
+    </div>
+  </div>
+</div>
+
+</main><!-- /main -->
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px;flex-wrap:wrap;">
+    <svg style="height:52px;width:52px;" viewBox="0 0 500 500"><use href="#ks-logo-sym"/></svg>
+  </div>
+  <p><a href="tel:3166806549" style="color:var(--sky);">(316) 680-6549</a> &nbsp;|&nbsp; <a href="mailto:kspowerwashingllc@gmail.com" style="color:var(--sky);">kspowerwashingllc@gmail.com</a> &nbsp;|&nbsp; Mon&ndash;Fri 8am&ndash;6pm</p>
+  <p style="margin-top:5px;">&copy; 2026 KS Power Washing LLC &nbsp;|&nbsp; Wichita, KS &nbsp;|&nbsp; Licensed &amp; Insured</p>
+</footer>
+
+<!-- CHAT LAUNCHER -->
+<button id="chat-launcher" onclick="toggleChat()">
+  &#128172;
+  <span class="chat-badge">AI</span>
+</button>
+
+<!-- CHAT WINDOW -->
+<div id="chat-win">
+  <div class="chat-hdr">
+    <div class="chat-av">&#128167;</div>
+    <div style="flex:1;"><div class="chat-hdr-name">KS Assistant</div><div class="chat-hdr-status">&#9679; Online &mdash; Powered by Claude AI</div></div>
+    <button id="chat-close-btn" type="button" aria-label="Close chat" onclick="toggleChat()">&#10005;</button>
+  </div>
+  <div class="chat-tabs" role="tablist" aria-label="Chat options">
+    <button class="chat-tab active" type="button" role="tab" aria-selected="true" id="tab-chat" onclick="switchTab('chat')">&#128172; Ask Us</button>
+    <button class="chat-tab" type="button" role="tab" aria-selected="false" id="tab-book" onclick="switchTab('book')">&#128197; Book a Job</button>
+  </div>
+  <div class="prog-bar" id="prog-bar" style="display:none;"><div class="prog-fill" id="prog-fill" style="width:20%"></div></div>
+  <div id="chat-pane">
+    <div class="chat-msgs" id="chat-msgs"></div>
+    <div class="chat-input-area">
+      <textarea id="chat-input" placeholder="Ask about services, pricing, scheduling..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+      <button id="chat-send" type="button" aria-label="Send message" onclick="sendMsg()">&#10148;</button>
+    </div>
+  </div>
+  <div id="book-pane"></div>
+  <div class="chat-footer" id="chat-footer">Powered by Claude AI &middot; Not a substitute for a formal quote</div>
+</div>
+
+<!-- CLIENT PORTAL FULL -->
+<div class="cp-overlay" id="cp-overlay" role="dialog" aria-modal="true" aria-labelledby="cp-portal-title" onclick="cpCheckClose(event)">
+  <div class="cp-shell" id="cp-shell">
+    <div class="cp-header">
+      <div>
+        <h2 id="cp-portal-title">&#9881; Client Portal</h2>
+        <div class="cp-header-sub" id="cp-header-sub">KS Power Washing LLC &mdash; Secure Online Access</div>
+      </div>
+      <button class="cp-close" type="button" aria-label="Close portal" onclick="cpClose()">&#10005;</button>
+    </div>
+    <div class="cp-tabs" id="cp-tabs">
+      <button class="cp-tab active" id="cpt-invoices" onclick="cpTab('invoices')">&#128176; Invoices</button>
+      <button class="cp-tab" id="cpt-schedule" onclick="cpTab('schedule')">&#128197; Schedule</button>
+      <button class="cp-tab" id="cpt-history" onclick="cpTab('history')">&#128338; History</button>
+      <button class="cp-tab" id="cpt-account" onclick="cpTab('account')">&#128100; Account</button>
+    </div>
+    <div class="cp-body" id="cp-body">
+      <div class="cp-alert info">&#128274; Sign in or create a free account to access your portal.</div>
+      <div id="cp-auth-wrap"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// IMPORTANT: Never expose API keys in client-side code.
+// Route AI requests through a backend proxy endpoint that holds the key server-side.
+// Example: set up a /api/chat route on your server that forwards to Anthropic.
+var CK=''; // Removed — use a backend proxy
+var CU='/api/chat'; // Replace with your backend proxy URL
+var SK='ks_bookings';
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function fmtDate(ds){if(!ds)return'';return new Date(ds+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});}
+function fmtShort(d){return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+function statusLabel(s){return{confirmed:'Confirmed',pending:'Pending',completed:'Completed',new:'New Request'}[s]||s;}
+function statusColor(s){return{confirmed:'#0ea5e9',pending:'#f59e0b',completed:'#10b981',new:'#a855f7'}[s]||'#fff';}
+
+var liveBookings=[];
+function loadBookings(){try{var r=localStorage.getItem(SK);liveBookings=r?JSON.parse(r)||[]:[];}catch(e){liveBookings=[];}}
+function saveBookings(){try{localStorage.setItem(SK,JSON.stringify(liveBookings));}catch(e){}}
+function allBookings(){return SEED.concat(liveBookings);}
+
+// Demo/sample appointments — generated once, then PERSISTED so the calendar
+// and the weekly report always draw from the same stable dataset.
+var SEED_SK='ks_demo_bookings';
+function genSeed(){
+  var now=new Date(),list=[],svcs=['Driveway & Concrete','House Soft Wash','Commercial Exterior','Roof Soft Wash','Gutter Cleaning','Deck & Patio'],stats=['confirmed','confirmed','confirmed','pending','pending','completed'],names=['Marcus R.','Sandra T.','Jennifer L.','Tom K.','Amy W.','David M.','Lisa P.','Carlos H.'],times=['Morning (8AM-11AM)','Midday (11AM-2PM)','Afternoon (2PM-5PM)'],addrs=['2341 N Meridian','814 W Douglas','5500 W 21st','1200 E Harry','3318 S Seneca','445 N Hillside'],used={},count=0,attempts=0;
+  // Spread demo jobs across the past 3 weeks AND the next ~8 weeks so the
+  // weekly report shows multiple weeks of history alongside upcoming work.
+  while(count<24&&attempts<400){attempts++;var d=new Date(now);d.setDate(d.getDate()+(-21+Math.floor(Math.random()*77)));if(d.getDay()===0)continue;var key=d.toISOString().split('T')[0];if((used[key]||0)>=2)continue;used[key]=(used[key]||0)+1;var isPast=d<now;list.push({id:'demo-'+key+'-'+used[key],date:key,service:svcs[Math.floor(Math.random()*svcs.length)],customer:names[Math.floor(Math.random()*names.length)],address:addrs[Math.floor(Math.random()*addrs.length)]+', Wichita',time:times[Math.floor(Math.random()*times.length)],status:isPast?'completed':stats[Math.floor(Math.random()*stats.length)],phone:'(316)'+(400+Math.floor(Math.random()*500))+'-'+(1000+Math.floor(Math.random()*9000)),isDemo:true});count++;}
+  return list;
+}
+var SEED=(function(){
+  try{
+    var saved=localStorage.getItem(SEED_SK);
+    if(saved){var arr=JSON.parse(saved);if(arr&&arr.length)return arr;}
+  }catch(e){}
+  var fresh=genSeed();
+  try{localStorage.setItem(SEED_SK,JSON.stringify(fresh));}catch(e){}
+  return fresh;
+})();
+
+// Animations
+function toggleMob(){
+  var menu=document.getElementById('mob-menu');
+  var btn=document.getElementById('hamburger-btn');
+  var isOpen=menu.classList.toggle('open');
+  if(btn)btn.setAttribute('aria-expanded',isOpen?'true':'false');
+}
+var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+
+// Drops
+var dc=document.getElementById('drops-c');
+function spawnDrop(){var d=document.createElement('div');d.className='drop';var sz=28+Math.random()*70,l=5+Math.random()*90,dur=7+Math.random()*9,del=Math.random()*4;d.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+l+'%;bottom:-10%;animation-duration:'+dur+'s;animation-delay:'+del+'s;';if(dc){dc.appendChild(d);setTimeout(function(){d.remove();},(dur+del)*1000);}}
+if(dc){for(var _i=0;_i<8;_i++)setTimeout(spawnDrop,_i*700);setInterval(spawnDrop,1300);}
+
+// Estimator
+function calcEst(){
+  var sel=document.getElementById('est-svc'),rate=parseFloat(sel.value),unit=sel.options[sel.selectedIndex].dataset.unit||'sqft',size=parseFloat(document.getElementById('est-sz').value)||0,soil=parseFloat(document.getElementById('est-soil').value)||1;
+  document.getElementById('est-sz-lbl').textContent=unit==='lnft'?'Linear Feet':'Area Size (Square Feet)';
+  var out=document.getElementById('est-out'),note=document.getElementById('est-note');
+  if(!size||size<=0){out.textContent='--';note.textContent='Enter area above';return;}
+  var lo=Math.max(75,size*rate*soil*0.85),hi=size*rate*soil*1.20;
+  out.textContent='$'+Math.round(lo).toLocaleString()+' - $'+Math.round(hi).toLocaleString();
+  note.textContent=size.toLocaleString()+' '+(unit==='lnft'?'lin ft':'sq ft')+' ('+(soil>1.2?'Heavy':soil>1.0?'Moderate':'Normal')+' soiling)';
+}
+function submitCF(btn){
+  var fn=(document.getElementById('cf-fname')||{}).value||'';
+  var ln=(document.getElementById('cf-lname')||{}).value||'';
+  var em=(document.getElementById('cf-email')||{}).value||'';
+  var ph=(document.getElementById('cf-phone')||{}).value||'';
+  var subj=(document.getElementById('cf-subject')||{}).value||'';
+  var msg=(document.getElementById('cf-message')||{}).value||'';
+  fn=fn.trim();ln=ln.trim();em=em.trim();ph=ph.trim();subj=subj.trim();msg=msg.trim();
+  var wrap=btn.closest('.cform');
+  var emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
+  if(!fn||!em||!emailOk||!msg){
+    var err=wrap?wrap.querySelector('.cf-err'):null;
+    if(wrap&&!err){err=document.createElement('div');err.className='cf-err cp-alert error';wrap.insertBefore(err,btn);}
+    if(err)err.innerHTML='&#9888; '+((!fn)?'Please enter your name.':(!em||!emailOk)?'Please enter a valid email address.':'Please enter a message.');
+    return;
+  }
+  // Save to localStorage
+  var msgs=[];try{msgs=JSON.parse(localStorage.getItem('ks_messages')||'[]');}catch(e){}
+  msgs.push({name:fn+' '+ln,email:em,phone:ph,subject:subj,message:msg,date:new Date().toISOString()});
+  try{localStorage.setItem('ks_messages',JSON.stringify(msgs));}catch(e){}
+  btn.textContent='\u2713 Sent! We\'ll be in touch within 24 hours.';
+  btn.style.background='#15803d';
+  btn.disabled=true;
+  // Clear form fields
+  ['cf-fname','cf-lname','cf-email','cf-phone','cf-subject','cf-message'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.value='';
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  FULL CLIENT PORTAL
+// ═══════════════════════════════════════════════════════
+var CP_SK='ks_portal_user';
+var CP_INV_SK='ks_portal_invoices';
+var cpUser=null;
+var cpActiveTab='invoices';
+
+function cpLoad(){
+  try{var r=localStorage.getItem(CP_SK);cpUser=r?JSON.parse(r):null;}catch(e){cpUser=null;}
+}
+function cpSave(){try{localStorage.setItem(CP_SK,JSON.stringify(cpUser));}catch(e){}}
+function cpLoadInv(){
+  try{var r=localStorage.getItem(CP_INV_SK);return r?JSON.parse(r):cpDefaultInvoices();}catch(e){return cpDefaultInvoices();}
+}
+function cpSaveInv(invs){try{localStorage.setItem(CP_INV_SK,JSON.stringify(invs));}catch(e){}}
+
+function cpDefaultInvoices(){
+  // Seed demo invoices tied to the logged-in user
+  return [
+    {id:'INV-2025-001',service:'Driveway & Concrete Cleaning',date:'2025-04-18',due:'2025-05-02',amount:185,status:'paid',addr:'2341 N Meridian, Wichita'},
+    {id:'INV-2025-002',service:'House Soft Wash + Gutters',date:'2025-05-09',due:'2025-05-23',amount:320,status:'unpaid',addr:'2341 N Meridian, Wichita'},
+    {id:'INV-2025-003',service:'Deck & Patio Wash',date:'2025-05-28',due:'2025-06-11',amount:240,status:'overdue',addr:'2341 N Meridian, Wichita'}
+  ];
+}
+
+function openPortal(){cpLoad();cpOpen();}
+function closePortal(){cpClose();}
+function checkModalClose(){} // legacy stub
+
+function cpOpen(){
+  var ov=document.getElementById('cp-overlay');
+  if(ov){ov.classList.add('open');document.body.style.overflow='hidden';}
+  if(!cpUser){cpShowAuth('login');}else{cpShowTab(cpActiveTab);}
+}
+function cpClose(){
+  var ov=document.getElementById('cp-overlay');
+  if(ov){ov.classList.remove('open');document.body.style.overflow='';}
+}
+function cpCheckClose(e){if(e.target===document.getElementById('cp-overlay'))cpClose();}
+
+function cpTab(tab){
+  cpActiveTab=tab;
+  ['invoices','schedule','history','account'].forEach(function(t){
+    var el=document.getElementById('cpt-'+t);
+    if(el)el.classList.toggle('active',t===tab);
+  });
+  if(!cpUser){cpShowAuth('login');return;}
+  cpShowTab(tab);
+}
+
+function cpShowTab(tab){
+  var body=document.getElementById('cp-body');
+  var sub=document.getElementById('cp-header-sub');
+  if(!body)return;
+  if(cpUser&&sub)sub.textContent='Welcome back, '+cpUser.fname+' — '+cpUser.email;
+  if(tab==='invoices')cpRenderInvoices();
+  else if(tab==='schedule')cpRenderSchedule();
+  else if(tab==='history')cpRenderHistory();
+  else if(tab==='account')cpRenderAccount();
+}
+
+// ── AUTH ──
+function cpShowAuth(mode){
+  var body=document.getElementById('cp-body');
+  if(!body)return;
+  var sub=document.getElementById('cp-header-sub');
+  if(sub)sub.textContent='KS Power Washing LLC — Secure Online Access';
+  if(mode==='login'){
+    body.innerHTML='<div class="cp-alert info">&#128274; Sign in to access your invoices, history, and account.</div>'+
+      '<div class="cp-field"><label class="cp-label">Email Address</label><input class="cp-input" id="cp-li-email" type="email" placeholder="you@example.com" autocomplete="email"></div>'+
+      '<div class="cp-field"><label class="cp-label">Password</label><input class="cp-input" id="cp-li-pw" type="password" placeholder="••••••••" autocomplete="current-password"></div>'+
+      '<div id="cp-li-err"></div>'+
+      '<button class="cp-btn" onclick="cpDoLogin()">&#128274; Sign In</button>'+
+      '<div class="cp-toggle">New customer? <a onclick="cpShowAuth(&apos;register&apos;)">Create a free account</a></div>'+
+      '<div class="cp-toggle" style="margin-top:6px;"><a onclick="cpGuestContinue()">Continue as guest →</a></div>';
+    setTimeout(function(){var e=document.getElementById('cp-li-email');if(e)e.focus();},100);
+  } else {
+    body.innerHTML='<div class="cp-alert info">&#127381; Create your free portal account to manage appointments and invoices.</div>'+
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">'+
+      '<div class="cp-field"><label class="cp-label">First Name</label><input class="cp-input" id="cp-r-fn" type="text" placeholder="Jane"></div>'+
+      '<div class="cp-field"><label class="cp-label">Last Name</label><input class="cp-input" id="cp-r-ln" type="text" placeholder="Smith"></div></div>'+
+      '<div class="cp-field"><label class="cp-label">Email</label><input class="cp-input" id="cp-r-em" type="email" placeholder="jane@example.com"></div>'+
+      '<div class="cp-field"><label class="cp-label">Phone</label><input class="cp-input" id="cp-r-ph" type="tel" placeholder="(316) 555-0000"></div>'+
+      '<div class="cp-field"><label class="cp-label">Street Address</label><input class="cp-input" id="cp-r-addr" type="text" placeholder="123 Main St, Wichita KS 67201"></div>'+
+      '<div class="cp-field"><label class="cp-label">Password</label><input class="cp-input" id="cp-r-pw" type="password" placeholder="Choose a password"></div>'+
+      '<div id="cp-r-err"></div>'+
+      '<button class="cp-btn" onclick="cpDoRegister()">&#127381; Create Account</button>'+
+      '<div class="cp-toggle">Already have an account? <a onclick="cpShowAuth(&apos;login&apos;)">Sign in</a></div>';
+    setTimeout(function(){var e=document.getElementById('cp-r-fn');if(e)e.focus();},100);
+  }
+}
+
+function cpDoLogin(){
+  var email=(document.getElementById('cp-li-email')||{}).value||'';
+  var pw=(document.getElementById('cp-li-pw')||{}).value||'';
+  var err=document.getElementById('cp-li-err');
+  if(!email||!pw){if(err)err.innerHTML='<div class="cp-alert error">&#9888; Please enter your email and password.</div>';return;}
+  // Check saved account
+  var saved=null;try{saved=JSON.parse(localStorage.getItem('ks_portal_accounts')||'{}');}catch(e){saved={};}
+  if(saved[email.toLowerCase()]&&saved[email.toLowerCase()].pw===pw){
+    cpUser=Object.assign({},saved[email.toLowerCase()]);delete cpUser.pw;cpSave();
+    cpShowTab(cpActiveTab);
+  } else if(!saved[email.toLowerCase()]){
+    if(err)err.innerHTML='<div class="cp-alert error">&#9888; No account found. <a onclick="cpShowAuth(&apos;register&apos;)" style="color:var(--blue);cursor:pointer;font-weight:700;">Create one?</a></div>';
+  } else {
+    if(err)err.innerHTML='<div class="cp-alert error">&#9888; Incorrect password. Please try again.</div>';
+  }
+}
+
+function cpDoRegister(){
+  var fn=(document.getElementById('cp-r-fn')||{}).value||'';
+  var ln=(document.getElementById('cp-r-ln')||{}).value||'';
+  var em=(document.getElementById('cp-r-em')||{}).value||'';
+  var ph=(document.getElementById('cp-r-ph')||{}).value||'';
+  var addr=(document.getElementById('cp-r-addr')||{}).value||'';
+  var pw=(document.getElementById('cp-r-pw')||{}).value||'';
+  var err=document.getElementById('cp-r-err');
+  if(!fn||!ln||!em||!pw){if(err)err.innerHTML='<div class="cp-alert error">&#9888; Please fill in all required fields.</div>';return;}
+  if(pw.length<6){if(err)err.innerHTML='<div class="cp-alert error">&#9888; Password must be at least 6 characters.</div>';return;}
+  var accounts={};try{accounts=JSON.parse(localStorage.getItem('ks_portal_accounts')||'{}');}catch(e){}
+  if(accounts[em.toLowerCase()]){if(err)err.innerHTML='<div class="cp-alert error">&#9888; An account with this email already exists. <a onclick="cpShowAuth(&apos;login&apos;)" style="color:var(--blue);cursor:pointer;font-weight:700;">Sign in</a></div>';return;}
+  // NOTE: Passwords stored in localStorage are NOT secure for production.
+  // Replace with a real backend auth system (e.g. Firebase Auth, Supabase, or your own API).
+  var newUser={fname:fn,lname:ln,email:em.toLowerCase(),phone:ph,address:addr,pw:pw,created:new Date().toISOString()};
+  accounts[em.toLowerCase()]=newUser;
+  try{localStorage.setItem('ks_portal_accounts',JSON.stringify(accounts));}catch(e){}
+  cpUser={fname:fn,lname:ln,email:em.toLowerCase(),phone:ph,address:addr,created:newUser.created};
+  cpSave();
+  // Seed invoices for new user
+  cpSaveInv(cpDefaultInvoices());
+  cpShowTab(cpActiveTab);
+}
+
+function cpGuestContinue(){
+  cpUser={fname:'Guest',lname:'',email:'guest',phone:'',address:'',isGuest:true};
+  cpShowTab(cpActiveTab);
+}
+
+function cpLogout(){
+  cpUser=null;try{localStorage.removeItem(CP_SK);}catch(e){}
+  var sub=document.getElementById('cp-header-sub');
+  if(sub)sub.textContent='KS Power Washing LLC — Secure Online Access';
+  cpShowAuth('login');
+}
+
+// ── INVOICES ──
+function cpRenderInvoices(){
+  var body=document.getElementById('cp-body');
+  if(!body)return;
+  var invs=cpLoadInv();
+  var unpaid=invs.filter(function(i){return i.status!=='paid';});
+  var paid=invs.filter(function(i){return i.status==='paid';});
+  var html='';
+  html+='<div class="cp-account-banner"><div class="cp-avatar">'+(cpUser.isGuest?'&#128101;':(cpUser.fname[0]+(cpUser.lname?cpUser.lname[0]:'')))+'</div>';
+  html+='<div><div class="cp-account-name">'+(cpUser.isGuest?'Guest Access':esc(cpUser.fname+' '+cpUser.lname))+'</div>';
+  html+='<div class="cp-account-meta">'+(cpUser.isGuest?'Sign in to see your invoices':esc(cpUser.email)+' &nbsp;&bull;&nbsp; '+invs.length+' invoices')+'</div></div></div>';
+  if(cpUser.isGuest){
+    html+='<div class="cp-empty"><div class="emp-ico">&#128176;</div><p>Sign in to view and pay your invoices online.<br><br><a onclick="cpShowAuth(&apos;login&apos;)" style="color:var(--blue);cursor:pointer;font-weight:700;">Sign in to your account</a></p></div>';
+    body.innerHTML=html;return;
+  }
+  if(unpaid.length){
+    html+='<div class="cp-section-lbl">Outstanding Invoices</div>';
+    unpaid.forEach(function(inv){html+=cpInvCard(inv,invs);});
+  }
+  if(paid.length){
+    html+='<div class="cp-section-lbl" style="margin-top:18px;">Payment History</div>';
+    paid.forEach(function(inv){html+=cpInvCard(inv,invs);});
+  }
+  if(!invs.length){html+='<div class="cp-empty"><div class="emp-ico">&#128176;</div><p>No invoices yet. Your invoices will appear here after your first service.</p></div>';}
+  body.innerHTML=html;
+}
+
+function cpInvCard(inv,allInvs){
+  var badge={'paid':'<span class="inv-badge paid">&#10003; Paid</span>','unpaid':'<span class="inv-badge unpaid">&#9719; Due</span>','overdue':'<span class="inv-badge overdue">&#9888; Overdue</span>'}[inv.status]||'';
+  var dueLabel=inv.status==='overdue'?'<span style="color:#dc2626;">Due: '+inv.due+'</span>':'Due: '+inv.due;
+  var pfId='pf-'+inv.id;
+  var payBtn=inv.status!=='paid'?'<button class="cp-btn gold sm" onclick="cpTogglePayForm(&apos;'+pfId+'&apos;)">&#128179; Pay Now</button>':'<button class="cp-btn outline sm" disabled style="opacity:0.5;cursor:default;">&#10003; Paid</button>';
+  var payForm='<div class="pay-form" id="pf-'+inv.id+'">'+
+    '<div class="cp-section-lbl" style="margin-top:0;">Payment Details &mdash; '+esc(inv.id)+'</div>'+
+    '<div style="font-size:0.84rem;color:var(--slate);margin-bottom:14px;">Amount due: <strong style="color:var(--navy);font-size:1rem;">$'+inv.amount+'</strong></div>'+
+    '<div class="cp-field"><label class="cp-label">Cardholder Name</label><input class="cp-input" id="pn-'+inv.id+'" placeholder="Jane Smith" value="'+(cpUser&&!cpUser.isGuest?esc(cpUser.fname+' '+cpUser.lname):'')+'"></div>'+
+    '<div class="cp-field"><label class="cp-label">Card Number</label><input class="cp-input" id="pcn-'+inv.id+'" placeholder="1234 5678 9012 3456" maxlength="19" oninput="cpFmtCard(this)"></div>'+
+    '<div class="pay-card-row">'+
+    '<div class="cp-field"><label class="cp-label">Expiry (MM/YY)</label><input class="cp-input" id="pex-'+inv.id+'" placeholder="08/27" maxlength="5" oninput="cpFmtExp(this)"></div>'+
+    '<div class="cp-field"><label class="cp-label">CVV</label><input class="cp-input" id="pcv-'+inv.id+'" placeholder="123" maxlength="4" type="password"></div>'+
+    '</div>'+
+    '<div id="pay-err-'+inv.id+'"></div>'+
+    '<button class="cp-btn gold" onclick="cpSubmitPay(&apos;'+inv.id+'&apos;)">&#128274; Pay $'+inv.amount+' Securely</button>'+
+    '<div class="pay-secure-note">&#128274; Payments are encrypted and processed securely. KS Power Washing never stores card details.</div>'+
+    '</div>';
+  return '<div class="inv-card">'+
+    '<div class="inv-top"><div><div class="inv-id">'+esc(inv.id)+'</div><div class="inv-meta">'+esc(inv.service)+' &nbsp;&bull;&nbsp; '+dueLabel+'</div><div class="inv-meta" style="margin-top:3px;">'+esc(inv.addr)+'</div></div>'+
+    '<div style="text-align:right;"><div class="inv-amount">$'+inv.amount+'</div>'+badge+'</div></div>'+
+    '<div class="inv-actions">'+payBtn+'<button class="cp-btn outline sm" onclick="cpDownloadInv(&apos;'+inv.id+'&apos;)">&#128196; Download</button></div>'+
+    payForm+'</div>';
+}
+
+function cpTogglePayForm(id){
+  var el=document.getElementById(id);
+  if(el)el.classList.toggle('open');
+}
+
+function cpFmtCard(inp){
+  var v=inp.value.replace(/\D/g,'').substring(0,16);
+  inp.value=v.replace(/(\d{4})/g,'$1 ').trim();
+}
+function cpFmtExp(inp){
+  var v=inp.value.replace(/\D/g,'').substring(0,4);
+  if(v.length>2)v=v.substring(0,2)+'/'+v.substring(2);
+  inp.value=v;
+}
+
+function cpSubmitPay(invId){
+  var name=(document.getElementById('pn-'+invId)||{}).value||'';
+  var card=(document.getElementById('pcn-'+invId)||{}).value||'';
+  var exp=(document.getElementById('pex-'+invId)||{}).value||'';
+  var cvv=(document.getElementById('pcv-'+invId)||{}).value||'';
+  var errEl=document.getElementById('pay-err-'+invId);
+  var cleanCard=card.replace(/\s/g,'');
+  if(!name||cleanCard.length<15||exp.length<5||cvv.length<3){
+    if(errEl)errEl.innerHTML='<div class="cp-alert error" style="margin-top:10px;">&#9888; Please fill in all card details correctly.</div>';return;
+  }
+  // This is a UI simulation only — wire up a real payment processor (Stripe, Square, etc.)
+  var btn=document.querySelector('#pf-'+invId+' .cp-btn.gold');
+  if(btn){btn.disabled=true;btn.innerHTML='&#9203; Processing...';}
+  setTimeout(function(){
+    var invs=cpLoadInv();
+    invs.forEach(function(i){if(i.id===invId)i.status='paid';});
+    cpSaveInv(invs);
+    var card=document.getElementById('pf-'+invId);
+    if(card){
+      card.innerHTML='<div class="cp-alert success" style="margin-top:0;">&#10003; Payment of $'+invs.find(function(i){return i.id===invId;}).amount+' received! A receipt has been sent to your email. Thank you!</div>';
+    }
+    // Refresh invoice card
+    setTimeout(cpRenderInvoices,2000);
+  },1800);
+}
+
+function cpDownloadInv(invId){
+  var invs=cpLoadInv();
+  var inv=invs.find(function(i){return i.id===invId;});
+  if(!inv)return;
+  var now=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  var w=window.open('','_blank');
+  w.document.write('<!DOCTYPE html><html><head><title>Invoice '+esc(inv.id)+'</title>'+
+  '<style>body{font-family:Arial,sans-serif;margin:0;padding:40px;color:#0f172a;}h1{font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:4px;}'+
+  '.sub{color:#64748b;font-size:0.88rem;margin-bottom:30px;}.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:30px;}'+
+  '.label{font-size:0.65rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#64748b;margin-bottom:4px;}'+
+  '.val{font-size:0.95rem;font-weight:600;}.amount-box{background:#f0f9ff;border:2px solid #bae6fd;border-radius:10px;padding:20px;text-align:center;}'+
+  '.amount{font-size:2.5rem;font-weight:900;color:#04182e;}.status{display:inline-block;padding:4px 12px;border-radius:100px;font-size:0.75rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;}'+
+  '.paid{background:#dcfce7;color:#15803d;}.unpaid{background:#fef3c7;color:#b45309;}.overdue{background:#fee2e2;color:#b91c1c;}'+
+  '.footer{margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0;font-size:0.75rem;color:#94a3b8;text-align:center;}</style></head><body>'+
+  '<h1>&#128179; KS Power Washing LLC</h1><div class="sub">Invoice &bull; Wichita, KS &bull; (316) 680-6549 &bull; kspowerwashingllc@gmail.com</div>'+
+  '<div class="grid"><div><div class="label">Invoice #</div><div class="val">'+esc(inv.id)+'</div>'+
+  '<div class="label" style="margin-top:14px;">Service Date</div><div class="val">'+esc(inv.date)+'</div>'+
+  '<div class="label" style="margin-top:14px;">Due Date</div><div class="val">'+esc(inv.due)+'</div></div>'+
+  '<div><div class="label">Service</div><div class="val">'+esc(inv.service)+'</div>'+
+  '<div class="label" style="margin-top:14px;">Service Address</div><div class="val">'+esc(inv.addr)+'</div>'+
+  '<div class="label" style="margin-top:14px;">Client</div><div class="val">'+esc(cpUser&&!cpUser.isGuest?cpUser.fname+' '+cpUser.lname:'Client')+'</div></div></div>'+
+  '<div class="amount-box"><div class="label">Total Amount</div><div class="amount">$'+inv.amount+'</div>'+
+  '<div style="margin-top:10px;"><span class="status '+inv.status+'">'+({paid:'Paid',unpaid:'Payment Due',overdue:'Overdue'}[inv.status]||inv.status)+'</span></div></div>'+
+  '<div class="footer">Generated '+now+' &bull; KS Power Washing LLC &bull; Licensed & Insured &bull; Wichita, Kansas</div>'+
+  '</body></html>');
+  w.document.close();setTimeout(function(){w.print();},400);
+}
+
+// ── SCHEDULE ──
+function cpRenderSchedule(){
+  var body=document.getElementById('cp-body');
+  if(!body)return;
+  var upcoming=[];
+  var today=new Date().toISOString().split('T')[0];
+  allBookings().forEach(function(b){if(b.date>=today)upcoming.push(b);});
+  upcoming.sort(function(a,b){return a.date<b.date?-1:1;});
+  var myBookings=liveBookings.slice();
+  var html='<div class="cp-account-banner"><div class="cp-avatar" style="background:linear-gradient(135deg,#0ea5e9,#0369a1);">&#128197;</div>'+
+    '<div><div class="cp-account-name">Upcoming Appointments</div>'+
+    '<div class="cp-account-meta">'+upcoming.length+' scheduled &bull; Wichita & surrounding area</div></div></div>';
+  if(!upcoming.length){
+    html+='<div class="cp-empty"><div class="emp-ico">&#128197;</div><p>No upcoming appointments. Use the AI assistant or call us to book your next service!</p></div>';
+  } else {
+    var svcIco={'Driveway & Concrete':'&#128663;','House Soft Wash':'&#127968;','Commercial Exterior':'&#127970;','Roof Soft Wash':'&#127783;','Gutters':'&#128167;','Gutter Cleaning':'&#128167;','Deck & Patio':'&#127795;','Deck & Fence':'&#127795;'};
+    upcoming.slice(0,12).forEach(function(b){
+      var svc=b.service||b.services||'Service';
+      var ico=svcIco[svc]||'&#128167;';
+      var name=b.customer||((b.fname||'')+' '+(b.lname||'')).trim()||'Customer';
+      var addr=b.address||((b.street||'')+(b.city?', '+b.city:'')+(b.zip?' '+b.zip:'')).trim()||'--';
+      var you=!b.isDemo?'<span style="font-size:0.6rem;background:rgba(168,85,247,0.15);color:#a855f7;padding:1px 6px;border-radius:3px;font-weight:700;margin-left:6px;">YOURS</span>':'';
+      html+='<div class="job-card"><div class="job-icon">'+ico+'</div>'+
+        '<div class="job-info"><div class="job-svc">'+esc(svc)+you+'</div>'+
+        '<div class="job-meta">'+esc(fmtDate(b.date))+' &bull; '+esc(b.time||'Time TBD')+'</div>'+
+        '<div class="job-meta">'+esc(name)+' &bull; '+esc(addr)+'</div></div>'+
+        '<span class="rpt-badge b-'+(b.status||'pending')+'">'+statusLabel(b.status||'pending')+'</span></div>';
+    });
+  }
+  html+='<div style="margin-top:16px;"><button class="cp-btn" onclick="cpClose();switchTab(&apos;book&apos;);if(!chatOpen)toggleChat();">&#128197; Book a New Appointment</button></div>'+
+    '<div style="margin-top:8px;"><a href="tel:3166806549" style="text-decoration:none;"><button class="cp-btn outline">&#128222; Call (316) 680-6549</button></a></div>';
+  body.innerHTML=html;
+}
+
+// ── HISTORY ──
+function cpRenderHistory(){
+  var body=document.getElementById('cp-body');
+  if(!body)return;
+  var today=new Date().toISOString().split('T')[0];
+  var past=allBookings().filter(function(b){return b.date<today;}).sort(function(a,b){return a.date>b.date?-1:1;});
+  var html='<div class="cp-account-banner"><div class="cp-avatar" style="background:linear-gradient(135deg,#10b981,#059669);">&#128338;</div>'+
+    '<div><div class="cp-account-name">Service History</div>'+
+    '<div class="cp-account-meta">'+past.length+' completed jobs</div></div></div>';
+  if(!past.length){
+    html+='<div class="cp-empty"><div class="emp-ico">&#128338;</div><p>No past service records yet. Your completed jobs will appear here.</p></div>';
+  } else {
+    var svcIco={'Driveway & Concrete':'&#128663;','House Soft Wash':'&#127968;','Commercial Exterior':'&#127970;','Roof Soft Wash':'&#127783;','Gutters':'&#128167;','Gutter Cleaning':'&#128167;','Deck & Patio':'&#127795;'};
+    past.slice(0,20).forEach(function(b){
+      var svc=b.service||b.services||'Service';
+      var ico=svcIco[svc]||'&#128167;';
+      var name=b.customer||((b.fname||'')+' '+(b.lname||'')).trim()||'Customer';
+      var r=eRev(svc);
+      html+='<div class="job-card"><div class="job-icon">'+ico+'</div>'+
+        '<div class="job-info"><div class="job-svc">'+esc(svc)+'</div>'+
+        '<div class="job-meta">'+esc(fmtDate(b.date))+' &bull; '+esc(b.time||'--')+'</div>'+
+        '<div class="job-meta">'+esc(name)+'</div></div>'+
+        '<div style="text-align:right;flex-shrink:0;"><div style="font-size:0.7rem;color:#6ee7b7;font-weight:700;">$'+r.lo+'-$'+r.hi+'</div>'+
+        '<span class="rpt-badge b-completed" style="display:block;margin-top:3px;">Done</span></div></div>';
+    });
+  }
+  body.innerHTML=html;
+}
+
+// ── ACCOUNT ──
+function cpRenderAccount(){
+  var body=document.getElementById('cp-body');
+  if(!body)return;
+  if(cpUser.isGuest){
+    body.innerHTML='<div class="cp-empty"><div class="emp-ico">&#128100;</div><p>You&apos;re browsing as a guest.<br><br><a onclick="cpShowAuth(&apos;login&apos;)" style="color:var(--blue);cursor:pointer;font-weight:700;">Sign in</a> or <a onclick="cpShowAuth(&apos;register&apos;)" style="color:var(--blue);cursor:pointer;font-weight:700;">create an account</a> to save your info.</p></div>';
+    return;
+  }
+  var html='<div id="cp-acct-alert"></div>'+
+    '<div class="cp-section-lbl">Profile Information</div>'+
+    '<div class="cp-two-col">'+
+    '<div class="cp-field"><label class="cp-label">First Name</label><input class="cp-input" id="ca-fn" value="'+esc(cpUser.fname||'')+'"></div>'+
+    '<div class="cp-field"><label class="cp-label">Last Name</label><input class="cp-input" id="ca-ln" value="'+esc(cpUser.lname||'')+'"></div>'+
+    '</div>'+
+    '<div class="cp-field"><label class="cp-label">Email</label><input class="cp-input" id="ca-em" type="email" value="'+esc(cpUser.email||'')+'" readonly style="opacity:0.65;cursor:not-allowed;"></div>'+
+    '<div class="cp-field"><label class="cp-label">Phone</label><input class="cp-input" id="ca-ph" type="tel" value="'+esc(cpUser.phone||'')+'" placeholder="(316) 555-0000"></div>'+
+    '<div class="cp-field"><label class="cp-label">Service Address</label><input class="cp-input" id="ca-addr" value="'+esc(cpUser.address||'')+'" placeholder="123 Main St, Wichita KS 67201"></div>'+
+    '<button class="cp-btn" onclick="cpSaveProfile()" style="margin-top:4px;">&#128190; Save Changes</button>'+
+    '<div class="cp-section-lbl" style="margin-top:24px;">Change Password</div>'+
+    '<div class="cp-field"><label class="cp-label">New Password</label><input class="cp-input" id="ca-pw" type="password" placeholder="New password (min 6 chars)"></div>'+
+    '<div class="cp-field"><label class="cp-label">Confirm Password</label><input class="cp-input" id="ca-pw2" type="password" placeholder="Re-enter new password"></div>'+
+    '<button class="cp-btn outline" onclick="cpChangePw()">&#128274; Update Password</button>'+
+    '<div class="cp-logout-row">'+
+    '<div style="font-size:0.75rem;color:var(--slate);">Member since '+new Date(cpUser.created||Date.now()).toLocaleDateString('en-US',{month:'long',year:'numeric'})+'</div>'+
+    '<button class="cp-btn danger sm" onclick="cpLogout()">&#9632; Sign Out</button></div>';
+  body.innerHTML=html;
+}
+
+function cpSaveProfile(){
+  var fn=(document.getElementById('ca-fn')||{}).value||'';
+  var ln=(document.getElementById('ca-ln')||{}).value||'';
+  var ph=(document.getElementById('ca-ph')||{}).value||'';
+  var addr=(document.getElementById('ca-addr')||{}).value||'';
+  var alertEl=document.getElementById('cp-acct-alert');
+  if(!fn){if(alertEl)alertEl.innerHTML='<div class="cp-alert error">&#9888; First name is required.</div>';return;}
+  cpUser.fname=fn;cpUser.lname=ln;cpUser.phone=ph;cpUser.address=addr;
+  cpSave();
+  // Also update in accounts store
+  var accounts={};try{accounts=JSON.parse(localStorage.getItem('ks_portal_accounts')||'{}');}catch(e){}
+  if(accounts[cpUser.email]){Object.assign(accounts[cpUser.email],{fname:fn,lname:ln,phone:ph,address:addr});try{localStorage.setItem('ks_portal_accounts',JSON.stringify(accounts));}catch(e){}}
+  if(alertEl)alertEl.innerHTML='<div class="cp-alert success">&#10003; Profile updated successfully!</div>';
+  var sub=document.getElementById('cp-header-sub');
+  if(sub)sub.textContent='Welcome back, '+cpUser.fname+' — '+cpUser.email;
+}
+
+function cpChangePw(){
+  var pw=(document.getElementById('ca-pw')||{}).value||'';
+  var pw2=(document.getElementById('ca-pw2')||{}).value||'';
+  var alertEl=document.getElementById('cp-acct-alert');
+  if(pw.length<6){if(alertEl)alertEl.innerHTML='<div class="cp-alert error">&#9888; Password must be at least 6 characters.</div>';return;}
+  if(pw!==pw2){if(alertEl)alertEl.innerHTML='<div class="cp-alert error">&#9888; Passwords do not match.</div>';return;}
+  var accounts={};try{accounts=JSON.parse(localStorage.getItem('ks_portal_accounts')||'{}');}catch(e){}
+  if(accounts[cpUser.email]){accounts[cpUser.email].pw=pw;try{localStorage.setItem('ks_portal_accounts',JSON.stringify(accounts));}catch(e){}}
+  if(alertEl)alertEl.innerHTML='<div class="cp-alert success">&#10003; Password updated! You can now use your new password to sign in.</div>';
+  var pf=document.getElementById('ca-pw');var pc=document.getElementById('ca-pw2');
+  if(pf)pf.value='';if(pc)pc.value='';
+}
+
+// Init portal
+cpLoad();
+
+// Gallery
+(function(){
+  var grid=document.getElementById('photo-grid');if(!grid)return;
+  var photos=[
+    {cap:'Driveway Restoration',cls:'wide',ico:'&#128663;',g:'linear-gradient(135deg,#0c4a6e,#0ea5e9)'},
+    {cap:'Residential Exterior Cleaning',cls:'sq',ico:'&#127968;',g:'linear-gradient(135deg,#075985,#38bdf8)'},
+    {cap:'Sidewalk & Pathway Cleaning',cls:'sq',ico:'&#128739;',g:'linear-gradient(135deg,#0e7490,#22d3ee)'},
+    {cap:'Brick Steps & Ironwork',cls:'tall',ico:'&#129704;',g:'linear-gradient(135deg,#1e3a8a,#3b82f6)'},
+    {cap:'Roof & Gutter Soft Wash',cls:'tall',ico:'&#127783;',g:'linear-gradient(135deg,#0c4a6e,#0284c7)'},
+    {cap:'Concrete & Patio Cleaning',cls:'wide',ico:'&#127795;',g:'linear-gradient(135deg,#155e75,#06b6d4)'}
+  ];
+  photos.forEach(function(p){
+    var card=document.createElement('div');card.className='photo-card '+p.cls;
+    var ph=document.createElement('div');
+    ph.style.cssText='width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:'+p.g+';color:rgba(255,255,255,0.92);position:absolute;inset:0;';
+    ph.innerHTML='<div style="font-size:2.8rem;line-height:1;margin-bottom:8px;filter:drop-shadow(0 3px 8px rgba(0,0,0,0.3));">'+p.ico+'</div><div style="font-size:0.62rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;opacity:0.75;">Before &amp; After</div>';
+    var cap=document.createElement('div');cap.className='photo-cap';cap.textContent=p.cap;
+    card.appendChild(ph);card.appendChild(cap);
+    grid.appendChild(card);
+  });
+})();
+
+// Calendar — offset 0 = current month
+var calOffset=0,calPop=null;
+function calNav(dir){calOffset+=dir;if(calOffset<0)calOffset=0;renderCal();}
+function renderCal(){
+  var now=new Date(),year=now.getFullYear(),month=now.getMonth()+calOffset;
+  year+=Math.floor(month/12);month=((month%12)+12)%12;
+  var mN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var calMon=document.getElementById('cal-month');if(calMon)calMon.textContent=mN[month]+' '+year;
+  var fd=new Date(year,month,1).getDay(),dim=new Date(year,month+1,0).getDate(),dip=new Date(year,month,0).getDate();
+  var grid=document.getElementById('cal-days');if(!grid)return;grid.innerHTML='';
+  var bmap={};allBookings().forEach(function(b){if(!bmap[b.date])bmap[b.date]=[];bmap[b.date].push(b);});
+  var today=now.toISOString().split('T')[0],sT=0,sC=0,sP=0,dWJ=0;
+  for(var i=0;i<42;i++){
+    var dn,dateObj,cur=true;
+    if(i<fd){dn=dip-fd+i+1;dateObj=new Date(year,month-1,dn);cur=false;}
+    else if(i>=fd+dim){dn=i-fd-dim+1;dateObj=new Date(year,month+1,dn);cur=false;}
+    else{dn=i-fd+1;dateObj=new Date(year,month,dn);}
+    var ds=dateObj.toISOString().split('T')[0],jobs=bmap[ds]||[],isT=(ds===today);
+    if(cur){sT+=jobs.length;jobs.forEach(function(b){if(b.status==='confirmed'||b.status==='new')sC++;if(b.status==='pending')sP++;});if(jobs.length)dWJ++;}
+    var cell=document.createElement('div');
+    cell.className='cal-day'+(cur?'':' other')+(isT?' today':'')+(jobs.length?' has-job':'');
+    var nd=document.createElement('div');nd.className='cal-dn';nd.textContent=dn;cell.appendChild(nd);
+    var shown=Math.min(jobs.length,2);
+    for(var j=0;j<shown;j++){
+      var b=jobs[j],pill=document.createElement('div');pill.className='cal-pill p-'+(b.status||'pending');pill.textContent=b.service||b.services;
+      (function(bk){pill.addEventListener('click',function(e){e.stopPropagation();showPop(bk,e);});})(b);cell.appendChild(pill);
+    }
+    if(jobs.length>2){var more=document.createElement('div');more.className='cal-more';more.textContent='+'+(jobs.length-2)+' more';cell.appendChild(more);}
+    if(jobs.length===1){(function(bk){cell.addEventListener('click',function(e){showPop(bk,e);});})(jobs[0]);}
+    grid.appendChild(cell);
+  }
+  var e1=document.getElementById('s-total');if(e1)e1.textContent=sT;
+  var e2=document.getElementById('s-conf');if(e2)e2.textContent=sC;
+  var e3=document.getElementById('s-pend');if(e3)e3.textContent=sP;
+  var bd=0;for(var d2=1;d2<=dim;d2++){if(new Date(year,month,d2).getDay()!==0)bd++;}
+  var e4=document.getElementById('s-open');if(e4)e4.textContent=Math.max(0,bd-dWJ);
+  buildReport();
+}
+function showPop(b,e){
+  closePop();
+  var pop=document.createElement('div');pop.className='cal-pop';pop.id='cal-pop';
+  var name=b.customer||((b.fname||'')+' '+(b.lname||'')).trim();
+  var addr=b.address||((b.street||'')+(b.city?', '+b.city:'')+(b.zip?' '+b.zip:'')).trim()||'--';
+  var yb=!b.isDemo?'<span style="font-size:0.56rem;background:rgba(168,85,247,0.18);color:#d8b4fe;padding:2px 6px;border-radius:100px;font-weight:700;text-transform:uppercase;margin-left:5px;">YOURS</span>':'';
+  var er=(!b.isDemo&&b.email)?'<div class="pop-row"><span class="pop-lbl">Email</span><span class="pop-val">'+esc(b.email)+'</span></div>':'';
+  var pr=(!b.isDemo&&b.prop)?'<div class="pop-row"><span class="pop-lbl">Type</span><span class="pop-val">'+esc(b.prop)+'</span></div>':'';
+  var nr=b.notes?'<div class="pop-row"><span class="pop-lbl">Notes</span><span class="pop-val">'+esc(b.notes)+'</span></div>':'';
+  pop.innerHTML='<button class="pop-close" onclick="closePop()">&#10005;</button>'+
+    '<h5>&#128167; '+esc(b.service||b.services||'')+yb+'</h5>'+
+    '<div class="pop-row"><span class="pop-lbl">Status</span><span class="pop-val"><span class="pop-status" style="color:'+statusColor(b.status)+';">'+statusLabel(b.status)+'</span></span></div>'+
+    '<div class="pop-row"><span class="pop-lbl">Client</span><span class="pop-val">'+esc(name)+'</span></div>'+
+    '<div class="pop-row"><span class="pop-lbl">Address</span><span class="pop-val">'+esc(addr)+'</span></div>'+pr+
+    '<div class="pop-row"><span class="pop-lbl">Date</span><span class="pop-val">'+esc(fmtDate(b.date))+'</span></div>'+
+    '<div class="pop-row"><span class="pop-lbl">Time</span><span class="pop-val">'+esc(b.time||'--')+'</span></div>'+
+    '<div class="pop-row"><span class="pop-lbl">Phone</span><span class="pop-val">'+esc(b.phone||'--')+'</span></div>'+er+nr;
+  document.body.appendChild(pop);calPop=pop;
+  var x=e.clientX,y=e.clientY,pw=276,ph=288,vw=window.innerWidth,vh=window.innerHeight;
+  pop.style.left=Math.min(x+12,vw-pw-12)+'px';
+  pop.style.top=((y+ph+16>vh)?Math.max(0,y-ph-8):y+10)+'px';
+  setTimeout(function(){document.addEventListener('click',closePop,{once:true});},10);
+}
+function closePop(){if(calPop){calPop.remove();calPop=null;}}
+
+// Reports
+var rptFilter='all';
+var SVC_R={'Driveway & Concrete':{lo:120,hi:280},'House Soft Wash':{lo:175,hi:380},'Commercial Exterior':{lo:320,hi:750},'Roof Soft Wash':{lo:200,hi:480},'Gutter Cleaning':{lo:95,hi:220},'Deck & Patio':{lo:160,hi:400},'Deck & Fence':{lo:160,hi:400}};
+function eRev(svc){var lo=0,hi=0;(svc||'').split(',').forEach(function(s){s=s.trim();var k=Object.keys(SVC_R).find(function(k){return s.toLowerCase().indexOf(k.toLowerCase())>-1;});var r=k?SVC_R[k]:{lo:100,hi:250};lo+=r.lo;hi+=r.hi;});return{lo:lo,hi:hi};}
+function wkKey(ds){var d=new Date(ds+'T12:00:00'),dow=d.getDay(),mon=new Date(d);mon.setDate(d.getDate()-dow+1);var sun=new Date(mon);sun.setDate(mon.getDate()+6);return{key:mon.toISOString().split('T')[0],label:fmtShort(mon)+' - '+fmtShort(sun)};}
+function setRF(f){rptFilter=f;buildReport();}
+function tgWk(id){var b=document.getElementById(id),ic=document.getElementById('ic-'+id);if(b){b.classList.toggle('open');if(ic)ic.classList.toggle('open');}}
+
+function buildReport(){
+  var all=allBookings().filter(function(b){if(rptFilter==='live')return!b.isDemo;if(rptFilter==='demo')return!!b.isDemo;return true;});
+  var el=document.getElementById('rpt-content');if(!el)return;
+  if(!all.length){el.innerHTML='<div class="rpt-empty">&#128202; No booking data found. Complete a booking to see your report.</div>';return;}
+  var weeks={};all.forEach(function(b){if(!b.date)return;var w=wkKey(b.date);if(!weeks[w.key])weeks[w.key]={label:w.label,bookings:[]};weeks[w.key].bookings.push(b);});
+  var sorted=Object.keys(weeks).sort().reverse();
+  var tj=all.length,tLo=0,tHi=0,stC={},svcC={};
+  all.forEach(function(b){var r=eRev(b.service||b.services);tLo+=r.lo;tHi+=r.hi;var st=b.status||'pending';stC[st]=(stC[st]||0)+1;(b.service||b.services||'').split(',').forEach(function(s){s=s.trim();if(s)svcC[s]=(svcC[s]||0)+1;});});
+  var html='<div class="rpt-nav"><div class="rpt-nav-title">'+sorted.length+' Week'+(sorted.length!==1?'s':'')+' &middot; '+tj+' appointment'+(tj!==1?'s':'')+'</div>'+
+    '<div class="rpt-filters"><button class="rbt'+(rptFilter==='all'?' active':'')+'" onclick="setRF(\'all\')">All Jobs</button>'+
+    '<button class="rbt'+(rptFilter==='live'?' active':'')+'" onclick="setRF(\'live\')">My Bookings</button>'+
+    '<button class="rbt'+(rptFilter==='demo'?' active':'')+'" onclick="setRF(\'demo\')">Demo Data</button>'+
+          '<button class="rbt-pdf" onclick="exportPDF()"><span class="ico" style="line-height:0;">'+ICO.pdf+'</span> Export PDF</button></div></div>'+
+    '<div style="font-size:0.72rem;color:var(--slate);margin:-6px 0 14px;">Showing every appointment on the calendar &mdash; sample data and saved bookings.</div>';
+  html+='<div style="background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.14);border-left:3px solid var(--sky);border-radius:10px;padding:14px 17px;margin-bottom:16px;">'+
+    '<div style="font-size:0.63rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--sky);margin-bottom:11px;">All-Time Summary</div>'+
+    '<div class="rpt-kpi-grid">'+
+    '<div class="rpt-kpi"><div class="kv">'+tj+'</div><div class="kl">Total Jobs</div></div>'+
+    '<div class="rpt-kpi"><div class="kv" style="font-size:1.2rem;">$'+Math.round(tLo/1000*10)/10+'k-$'+Math.round(tHi/1000*10)/10+'k</div><div class="kl">Est. Revenue</div></div>'+
+    '<div class="rpt-kpi"><div class="kv">'+(stC['confirmed']||0)+'</div><div class="kl">Confirmed</div></div>'+
+    '<div class="rpt-kpi"><div class="kv">'+(stC['new']||0)+'</div><div class="kl">New Requests</div></div></div>'+
+    '<div class="rpt-svc-tags">'+Object.keys(svcC).sort(function(a,b){return svcC[b]-svcC[a];}).map(function(s){return'<div class="rpt-svc-tag"><span>'+svcC[s]+'x</span>'+esc(s)+'</div>';}).join('')+'</div></div>';
+  var curWk=wkKey(new Date().toISOString().split('T')[0]).key;
+  sorted.forEach(function(wk,idx){
+    var w=weeks[wk],jobs=w.bookings.sort(function(a,b){return a.date<b.date?-1:1;}),wLo=0,wHi=0,wP=0,wN=0;
+    jobs.forEach(function(b){var r=eRev(b.service||b.services);wLo+=r.lo;wHi+=r.hi;if(b.status==='pending')wP++;if(b.status==='new')wN++;});
+    var isO=(wk===curWk)||(idx===0&&sorted.indexOf(curWk)===-1);
+    html+='<div class="rpt-week"><div class="rpt-hdr" onclick="tgWk(\'rw-'+wk+'\')">'+
+      '<div class="rpt-wk-title">&#128197; '+esc(w.label)+'</div>'+
+      '<div class="rpt-meta"><span class="rpt-chip c-jobs">'+jobs.length+' job'+(jobs.length!==1?'s':'')+'</span>'+
+      '<span class="rpt-chip c-rev">$'+wLo+'-$'+wHi+'</span>'+
+      (wP?'<span class="rpt-chip c-pend">'+wP+' pending</span>':'')+
+      (wN?'<span class="rpt-chip c-new2">'+wN+' new</span>':'')+
+      '</div><span class="rpt-tog'+(isO?' open':'')+'" id="ic-rw-'+wk+'">&#9660;</span></div>'+
+      '<div class="rpt-body'+(isO?' open':'')+'" id="rw-'+wk+'">'+
+      '<table class="rpt-table"><thead><tr><th>Date</th><th>Service</th><th>Client</th><th>Address</th><th>Time</th><th>Est.</th><th>Status</th></tr></thead><tbody>'+
+      jobs.map(function(b){var r=eRev(b.service||b.services),name=b.customer||((b.fname||'')+' '+(b.lname||'')).trim()||'--',addr=b.address||((b.street||'')+(b.city?', '+b.city:'')+(b.zip?' '+b.zip:'')).trim()||'--',st=b.status||'pending',you=!b.isDemo?' <span style="font-size:0.55rem;background:rgba(168,85,247,0.18);color:#d8b4fe;padding:1px 4px;border-radius:3px;font-weight:700;">YOU</span>':'';
+        return'<tr><td style="white-space:nowrap;">'+esc(fmtDate(b.date))+'</td><td>'+esc(b.service||b.services||'--')+you+'</td><td style="white-space:nowrap;">'+esc(name)+'</td><td style="max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(addr)+'</td><td style="white-space:nowrap;">'+esc(b.time||'--')+'</td><td style="color:#6ee7b7;white-space:nowrap;">$'+r.lo+'-$'+r.hi+'</td><td><span class="rpt-badge b-'+st+'">'+statusLabel(st)+'</span></td></tr>';}).join('')+
+      '</tbody></table></div></div>';
+  });
+  el.innerHTML=html;
+}
+
+function exportPDF(){
+  var all=allBookings().filter(function(b){if(rptFilter==='live')return!b.isDemo;if(rptFilter==='demo')return!!b.isDemo;return true;});
+  if(!all.length){alert('No bookings to export.');return;}
+  var weeks={};all.forEach(function(b){if(!b.date)return;var w=wkKey(b.date);if(!weeks[w.key])weeks[w.key]={label:w.label,bookings:[]};weeks[w.key].bookings.push(b);});
+  var sorted=Object.keys(weeks).sort(),tj=all.length,tLo=0,tHi=0,stC={},svcC={};
+  all.forEach(function(b){var r=eRev(b.service||b.services);tLo+=r.lo;tHi+=r.hi;var st=b.status||'pending';stC[st]=(stC[st]||0)+1;(b.service||b.services||'').split(',').forEach(function(s){s=s.trim();if(s)svcC[s]=(svcC[s]||0)+1;});});
+  var fL=rptFilter==='live'?'My Bookings':rptFilter==='demo'?'Demo Data':'All Jobs';
+  var dS=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  var C={navy:'#04182e',navyMid:'#0a2847',blue:'#0369a1',sky:'#0ea5e9',ice:'#bae6fd',icePale:'#e0f2fe',text:'#0f172a',slate:'#64748b',green:'#16a34a',accent:'#f59e0b',border:'#e2e8f0'};
+  var sCol={confirmed:C.sky,pending:C.accent,completed:C.green,new:'#a855f7'};
+  function pb(st){var c=sCol[st]||C.slate;return'<span style="background:'+c+'22;color:'+c+';border:1px solid '+c+'44;font-size:7px;font-weight:700;padding:2px 7px;border-radius:100px;text-transform:uppercase;">'+statusLabel(st)+'</span>';}
+  var wkH=sorted.map(function(wk){
+    var w=weeks[wk],jobs=w.bookings.sort(function(a,b){return a.date<b.date?-1:1;}),wLo=0,wHi=0;
+    jobs.forEach(function(b){var r=eRev(b.service||b.services);wLo+=r.lo;wHi+=r.hi;});
+    var rows=jobs.map(function(b,i){var r=eRev(b.service||b.services),name=b.customer||((b.fname||'')+' '+(b.lname||'')).trim()||'--',addr=b.address||((b.street||'')+(b.city?', '+b.city:'')+(b.zip?' '+b.zip:'')).trim()||'--',you=!b.isDemo?' YOU':'';
+      return'<tr style="background:'+(i%2===0?C.icePale:'#fff')+'"><td style="padding:6px 9px;font-size:8px;border-bottom:1px solid '+C.border+';white-space:nowrap;">'+esc(fmtDate(b.date))+'</td><td style="padding:6px 9px;font-size:8px;border-bottom:1px solid '+C.border+';">'+esc(b.service||b.services||'--')+you+'</td><td style="padding:6px 9px;font-size:8px;border-bottom:1px solid '+C.border+';white-space:nowrap;">'+esc(name)+'</td><td style="padding:6px 9px;font-size:8px;border-bottom:1px solid '+C.border+';">'+esc(addr)+'</td><td style="padding:6px 9px;font-size:8px;border-bottom:1px solid '+C.border+';white-space:nowrap;">'+esc(b.time||'--')+'</td><td style="padding:6px 9px;font-size:8px;border-bottom:1px solid '+C.border+';color:'+C.green+';font-weight:800;">$'+r.lo+'-$'+r.hi+'</td><td style="padding:6px 9px;border-bottom:1px solid '+C.border+';">'+pb(b.status||'pending')+'</td></tr>';}).join('');
+    return'<div style="margin-bottom:18px;page-break-inside:avoid;"><div style="background:'+C.navyMid+';padding:8px 12px;border-radius:6px 6px 0 0;border-left:4px solid '+C.sky+';display:flex;align-items:center;gap:8px;"><span style="font-size:10px;font-weight:800;color:#fff;text-transform:uppercase;">'+esc(w.label)+'</span><span style="font-size:7px;background:rgba(14,165,233,0.2);color:'+C.ice+';padding:2px 7px;border-radius:100px;font-weight:700;">'+jobs.length+' jobs</span><span style="font-size:7px;background:rgba(22,163,74,0.2);color:#86efac;padding:2px 7px;border-radius:100px;font-weight:700;">$'+wLo+'-$'+wHi+'</span></div><table style="width:100%;border-collapse:collapse;border:1px solid '+C.border+';border-top:none;"><thead><tr style="background:'+C.icePale+'"><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Date</th><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Service</th><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Client</th><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Address</th><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Time</th><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Revenue</th><th style="padding:6px 9px;font-size:7px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:'+C.blue+';text-align:left;border-bottom:2px solid '+C.ice+';">Status</th></tr></thead><tbody>'+rows+'</tbody></table></div>';}).join('');
+  var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><title>KS Power Washing Report</title><style>*{box-sizing:border-box;}body{margin:0;padding:0;font-family:Arial,sans-serif;background:#fff;}@page{size:letter landscape;margin:13mm 15mm;}@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}</style></head><body>'+
+    '<div style="background:linear-gradient(135deg,'+C.navy+','+C.navyMid+','+C.blue+');padding:22px 28px;border-radius:9px;margin-bottom:18px;border-bottom:3px solid '+C.sky+';">'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:11px;">'+
+    '<div><div style="font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:0.04em;">KS Power Washing LLC</div>'+
+    '<div style="font-size:8px;color:'+C.sky+';font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-top:2px;">Wichita, Kansas &middot; (316) 680-6549 &middot; kspowerwashingllc@gmail.com</div>'+
+    '<div style="display:inline-block;background:rgba(14,165,233,0.18);border:1px solid rgba(14,165,233,0.35);border-radius:100px;padding:3px 11px;font-size:7px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:'+C.ice+';margin-top:6px;">Weekly Appointment Report &middot; '+fL+'</div></div>'+
+    '<div style="text-align:right;"><div style="font-size:7px;color:rgba(255,255,255,0.4);text-transform:uppercase;">Generated</div><div style="font-size:10px;color:'+C.ice+';font-weight:700;margin-top:2px;">'+dS+'</div></div></div></div>'+
+    '<table style="width:100%;border-collapse:collapse;border:1px solid '+C.border+';border-radius:8px;overflow:hidden;margin-bottom:16px;"><tr style="background:'+C.icePale+'">'+
+    '<td style="padding:12px 15px;text-align:center;border-right:1px solid '+C.border+'"><div style="font-size:18px;font-weight:900;color:'+C.navy+'">'+tj+'</div><div style="font-size:7px;font-weight:700;text-transform:uppercase;color:'+C.slate+';margin-top:3px;">Total Jobs</div></td>'+
+    '<td style="padding:12px 15px;text-align:center;border-right:1px solid '+C.border+'"><div style="font-size:14px;font-weight:900;color:'+C.green+'">$'+tLo.toLocaleString()+'-$'+tHi.toLocaleString()+'</div><div style="font-size:7px;font-weight:700;text-transform:uppercase;color:'+C.slate+';margin-top:3px;">Est. Revenue</div></td>'+
+    '<td style="padding:12px 15px;text-align:center;border-right:1px solid '+C.border+'"><div style="font-size:18px;font-weight:900;color:'+C.navy+'">'+sorted.length+'</div><div style="font-size:7px;font-weight:700;text-transform:uppercase;color:'+C.slate+';margin-top:3px;">Weeks Covered</div></td>'+
+    (stC['confirmed']?'<td style="padding:12px 15px;text-align:center;border-right:1px solid '+C.border+'"><div style="font-size:18px;font-weight:900;color:'+C.sky+'">'+stC['confirmed']+'</div><div style="font-size:7px;font-weight:700;text-transform:uppercase;color:'+C.slate+';margin-top:3px;">Confirmed</div></td>':'')+
+    (stC['new']?'<td style="padding:12px 15px;text-align:center;"><div style="font-size:18px;font-weight:900;color:#a855f7">'+stC['new']+'</div><div style="font-size:7px;font-weight:700;text-transform:uppercase;color:'+C.slate+';margin-top:3px;">New Requests</div></td>':'')+
+    '</tr></table>'+
+    '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">'+Object.keys(svcC).sort(function(a,b){return svcC[b]-svcC[a];}).map(function(s){return'<span style="background:'+C.icePale+';border:1px solid '+C.ice+';border-left:3px solid '+C.sky+';border-radius:5px;padding:4px 9px;font-size:8px;font-weight:700;color:'+C.blue+'"><strong style="color:'+C.navy+'">'+svcC[s]+'x</strong> '+esc(s)+'</span>';}).join('')+'</div>'+
+    wkH+
+    '<div style="padding:9px 13px;background:'+C.navy+';border-radius:6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;"><span style="font-size:7px;color:rgba(255,255,255,0.44);">KS Power Washing LLC &middot; Wichita, KS &middot; (316) 680-6549 &middot; kspowerwashingllc@gmail.com &middot; Mon-Fri 8am-6pm</span><span style="font-size:7px;color:rgba(14,165,233,0.6);">Licensed & Insured &middot; EPA Compliant</span></div>'+
+    '</body></html>';
+  var win=window.open('','_blank');if(!win){alert('Pop-up blocked. Please allow pop-ups.');return;}
+  win.document.write(html);win.document.close();win.focus();setTimeout(function(){win.print();},600);
+}
+
+// AI Chat
+var SYS='You are the AI assistant for KS Power Washing LLC, Wichita, KS. Phone: (316) 680-6549. Email: kspowerwashingllc@gmail.com. Hours: Mon-Fri 8am-6pm. Services: deck washing, driveway cleaning, exterior washing, patio washing, pressure washing, gutter cleaning, commercial exterior. Values: Affordable Pricing, Great Customer Service, Friendly Staff. Credit and debit cards accepted. Free estimates available. Pricing: Concrete ~$0.17-$0.24/sqft, Siding ~$0.13-$0.18/sqft, Roof ~$0.26-$0.36/sqft, Gutters ~$1.25-$1.75/lnft, Deck/Patio ~$0.38-$0.55/sqft, Commercial ~$0.30-$0.42/sqft. Be warm and concise (2-4 sentences). Always end with a call to action. Mention the Client Portal for scheduling and payments when relevant.';
+var chatHist=[],chatOpen=false,chatInited=false;
+function toggleChat(){chatOpen=!chatOpen;var w=document.getElementById('chat-win');w.classList.toggle('open',chatOpen);if(chatOpen&&!chatInited){chatInited=true;showWelcome();}if(chatOpen)setTimeout(function(){var i=document.getElementById('chat-input');if(i)i.focus();},300);}
+function showWelcome(){addMsg('agent','Hi! I am the KS Power Washing assistant. I can help with services, pricing, scheduling, and more.\n\nPhone: (316) 680-6549\nHours: Mon-Fri 8am-6pm\nCards accepted!');showChips(['Driveway cleaning price','Deck washing quote','Book a job','Pay an invoice']);}
+function addMsg(role,text){var c=document.getElementById('chat-msgs'),w=document.createElement('div');w.className='msg '+role;var av=document.createElement('div');av.className='msg-av';av.innerHTML=role==='agent'?'&#128167;':'&#128100;';var bub=document.createElement('div');bub.className='msg-bub';bub.innerHTML=text.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');w.appendChild(av);w.appendChild(bub);c.appendChild(w);c.scrollTop=c.scrollHeight;}
+function showChips(opts){var c=document.getElementById('chat-msgs'),w=document.createElement('div');w.className='chips';w.id='chat-chips';opts.forEach(function(o){var ch=document.createElement('button');ch.className='chip';ch.textContent=o;ch.onclick=function(){w.remove();sendUM(o);};w.appendChild(ch);});c.appendChild(w);c.scrollTop=c.scrollHeight;}
+function showTyping(){var c=document.getElementById('chat-msgs'),w=document.createElement('div');w.className='msg agent';w.id='typing-w';var av=document.createElement('div');av.className='msg-av';av.innerHTML='&#128167;';var ind=document.createElement('div');ind.className='typing';ind.innerHTML='<div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>';w.appendChild(av);w.appendChild(ind);c.appendChild(w);c.scrollTop=c.scrollHeight;}
+function rmTyping(){var el=document.getElementById('typing-w');if(el)el.remove();}
+function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg();}}
+function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,86)+'px';}
+function sendMsg(){var inp=document.getElementById('chat-input'),t=inp.value.trim();if(!t)return;inp.value='';inp.style.height='auto';sendUM(t);}
+async function sendUM(text){
+  var chips=document.getElementById('chat-chips');if(chips)chips.remove();
+  addMsg('user',text);chatHist.push({role:'user',content:text});
+  var btn=document.getElementById('chat-send'),inp=document.getElementById('chat-input');btn.disabled=true;inp.disabled=true;showTyping();
+  try{
+    var msgs=chatHist.map(function(m){return{role:m.role==='assistant'?'assistant':'user',content:m.content};});
+    var res=await fetch(CU,{method:'POST',headers:{'Content-Type':'application/json','x-api-key':CK,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:400,system:SYS,messages:msgs})});
+    var data=await res.json();rmTyping();
+    if(!res.ok||data.error){addMsg('agent','Sorry, having a technical issue. Please call (316) 680-6549!');return;}
+    var reply=(data.content&&data.content[0]&&data.content[0].text)?data.content[0].text.trim():'Please call (316) 680-6549!';
+    chatHist.push({role:'assistant',content:reply});addMsg('agent',reply);
+    if(chatHist.filter(function(m){return m.role==='assistant';}).length===1)showChips(['Get a price estimate','Book a job','Pay an invoice','Service area']);
+  }catch(err){rmTyping();addMsg('agent','Connectivity issue. Please call (316) 680-6549!');}
+  finally{btn.disabled=false;inp.disabled=false;inp.focus();}
+}
+
+// Booking Wizard
+var bStarted=false,bStep=0,bData={},BPROG=['20%','40%','60%','80%','100%'];
+var BSY='You are a booking confirmation assistant for KS Power Washing LLC in Wichita, KS. Write a warm 2-3 sentence confirmation mentioning their service and date. Say someone will call within 1 business day at (316) 680-6549. Sign off as "The KS Power Washing Team". Under 80 words.';
+function switchTab(tab){
+  var cp=document.getElementById('chat-pane'),bp=document.getElementById('book-pane'),pb=document.getElementById('prog-bar'),ft=document.getElementById('chat-footer'),tc=document.getElementById('tab-chat'),tb=document.getElementById('tab-book');
+  if(tab==='chat'){
+    cp.classList.remove('hidden');bp.style.display='none';bp.classList.remove('active');pb.style.display='none';
+    tc.classList.add('active');tc.setAttribute('aria-selected','true');
+    tb.classList.remove('active');tb.setAttribute('aria-selected','false');
+    ft.textContent='Powered by Claude AI - Not a substitute for a formal quote';
+  }else{
+    cp.classList.add('hidden');bp.style.display='flex';bp.classList.add('active');pb.style.display='block';
+    tc.classList.remove('active');tc.setAttribute('aria-selected','false');
+    tb.classList.add('active');tb.setAttribute('aria-selected','true');
+    ft.textContent='Your info is only used to schedule your appointment';
+    if(!bStarted){bStarted=true;bStep=0;bData={};renderBS();}
+  }
+}
+function setP(i){var f=document.getElementById('prog-fill');if(f)f.style.width=BPROG[i]||'20%';}
+function renderBS(){var p=document.getElementById('book-pane');if(!p)return;p.innerHTML='';setP(bStep);[rS0,rS1,rS2,rS3,rS4][bStep]();}
+function rS0(){
+  var svcs=[{e:'&#128663;',l:'Driveway & Concrete'},{e:'&#127968;',l:'House Soft Wash'},{e:'&#127970;',l:'Commercial Exterior'},{e:'&#127783;',l:'Roof Soft Wash'},{e:'&#128167;',l:'Gutters'},{e:'&#127795;',l:'Deck & Patio'}];
+  var p=document.getElementById('book-pane'),div=document.createElement('div');div.className='book-step';
+  var h=document.createElement('div');h.innerHTML='<div class="book-step-lbl">Step 1 of 4</div><h4>What service do you need?</h4><p>Select one or more services.</p>';
+  var g=document.createElement('div');g.className='svc-grid-b';
+  svcs.forEach(function(s){var b=document.createElement('button');b.className='svc-btn';b.dataset.val=s.l;b.innerHTML='<span class="svc-btn-ico">'+s.e+'</span><span>'+s.l+'</span>';b.addEventListener('click',function(){b.classList.toggle('selected');var nx=document.getElementById('btn-s0nx');if(nx)nx.disabled=document.querySelectorAll('.svc-btn.selected').length===0;});g.appendChild(b);});
+  var nx=document.createElement('button');nx.className='btn-next';nx.id='btn-s0nx';nx.disabled=true;nx.innerHTML='Continue &#8250;';
+  nx.addEventListener('click',function(){bData.services=Array.from(document.querySelectorAll('.svc-btn.selected')).map(function(x){return x.dataset.val;}).join(', ');bStep++;renderBS();});
+  div.appendChild(h);div.appendChild(g);div.appendChild(nx);p.appendChild(div);
+}
+function rS1(){
+  var p=document.getElementById('book-pane'),div=document.createElement('div');div.className='book-step';
+  div.innerHTML='<div class="book-step-lbl">Step 2 of 4</div><h4>Service address</h4><p>We serve Wichita and surrounding Kansas cities.</p>'+
+    '<div class="b-field"><label class="b-label">Street Address</label><input class="b-input" id="b-st" type="text" placeholder="123 Main St"></div>'+
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;"><div class="b-field"><label class="b-label">City</label><input class="b-input" id="b-ci" type="text" placeholder="Wichita"></div><div class="b-field"><label class="b-label">ZIP</label><input class="b-input" id="b-zi" type="text" placeholder="67201" maxlength="5"></div></div>'+
+    '<div class="b-field"><label class="b-label">Property Type</label><select class="b-input b-select" id="b-pr"><option>Residential</option><option>Commercial</option><option>HOA / Multi-Unit</option></select></div>'+
+    '<div style="display:flex;gap:6px;"><button class="btn-back" id="btn-s1bk">&#8249; Back</button><button class="btn-next" id="btn-s1nx" disabled style="flex:1;">Continue &#8250;</button></div>';
+  p.appendChild(div);
+  function ck(){var n=document.getElementById('btn-s1nx');if(n)n.disabled=!(document.getElementById('b-st').value.trim()&&document.getElementById('b-ci').value.trim()&&document.getElementById('b-zi').value.trim().length>=5);}
+  document.getElementById('b-st').addEventListener('input',ck);document.getElementById('b-ci').addEventListener('input',ck);document.getElementById('b-zi').addEventListener('input',ck);
+  document.getElementById('btn-s1bk').addEventListener('click',function(){bStep--;renderBS();});
+  document.getElementById('btn-s1nx').addEventListener('click',function(){bData.street=document.getElementById('b-st').value.trim();bData.city=document.getElementById('b-ci').value.trim();bData.zip=document.getElementById('b-zi').value.trim();bData.prop=document.getElementById('b-pr').value;bStep++;renderBS();});
+}
+function rS2(){
+  var tom=new Date();tom.setDate(tom.getDate()+1);var minD=tom.toISOString().split('T')[0];
+  var p=document.getElementById('book-pane'),div=document.createElement('div');div.className='book-step';
+  div.innerHTML='<div class="book-step-lbl">Step 3 of 4</div><h4>Preferred date &amp; time</h4><p>We will confirm availability when we call.</p>'+
+    '<div class="b-field"><label class="b-label">Preferred Date</label><input class="b-input" id="b-da" type="date" min="'+minD+'"></div>'+
+    '<div class="b-field"><label class="b-label">Time Window</label><select class="b-input b-select" id="b-ti"><option value="">-- Select --</option><option>Morning (8AM-11AM)</option><option>Midday (11AM-2PM)</option><option>Afternoon (2PM-5PM)</option><option>Flexible anytime</option></select></div>'+
+    '<div class="b-field"><label class="b-label">Notes (optional)</label><textarea class="b-input" id="b-no" rows="2" style="resize:none;" placeholder="Gate code, dogs in yard, etc..."></textarea></div>'+
+    '<div style="display:flex;gap:6px;"><button class="btn-back" id="btn-s2bk">&#8249; Back</button><button class="btn-next" id="btn-s2nx" disabled style="flex:1;">Continue &#8250;</button></div>';
+  p.appendChild(div);
+  function ck(){var n=document.getElementById('btn-s2nx');if(n)n.disabled=!(document.getElementById('b-da').value&&document.getElementById('b-ti').value);}
+  document.getElementById('b-da').addEventListener('change',ck);document.getElementById('b-ti').addEventListener('change',ck);
+  document.getElementById('btn-s2bk').addEventListener('click',function(){bStep--;renderBS();});
+  document.getElementById('btn-s2nx').addEventListener('click',function(){bData.date=document.getElementById('b-da').value;bData.time=document.getElementById('b-ti').value;bData.notes=document.getElementById('b-no').value.trim();bStep++;renderBS();});
+}
+function rS3(){
+  var p=document.getElementById('book-pane'),div=document.createElement('div');div.className='book-step';
+  div.innerHTML='<div class="book-step-lbl">Step 4 of 4</div><h4>Your contact info</h4><p>We will call within 1 business day to confirm.</p>'+
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;"><div class="b-field"><label class="b-label">First Name</label><input class="b-input" id="b-fn" type="text" placeholder="Jane"></div><div class="b-field"><label class="b-label">Last Name</label><input class="b-input" id="b-ln" type="text" placeholder="Smith"></div></div>'+
+    '<div class="b-field"><label class="b-label">Phone</label><input class="b-input" id="b-ph" type="tel" placeholder="(316) 555-0000"></div>'+
+    '<div class="b-field"><label class="b-label">Email (optional)</label><input class="b-input" id="b-em" type="email" placeholder="jane@example.com"></div>'+
+    '<div style="display:flex;gap:6px;"><button class="btn-back" id="btn-s3bk">&#8249; Back</button><button class="btn-next" id="btn-s3nx" disabled style="flex:1;">Review &#8250;</button></div>';
+  p.appendChild(div);
+  function ck(){var n=document.getElementById('btn-s3nx');if(n)n.disabled=!(document.getElementById('b-fn').value.trim()&&document.getElementById('b-ln').value.trim()&&document.getElementById('b-ph').value.trim().length>=7);}
+  document.getElementById('b-fn').addEventListener('input',ck);document.getElementById('b-ln').addEventListener('input',ck);document.getElementById('b-ph').addEventListener('input',ck);
+  document.getElementById('btn-s3bk').addEventListener('click',function(){bStep--;renderBS();});
+  document.getElementById('btn-s3nx').addEventListener('click',function(){bData.fname=document.getElementById('b-fn').value.trim();bData.lname=document.getElementById('b-ln').value.trim();bData.phone=document.getElementById('b-ph').value.trim();bData.email=document.getElementById('b-em').value.trim();bStep++;renderBS();});
+}
+function rS4(){
+  var d=bData,p=document.getElementById('book-pane'),div=document.createElement('div');div.className='book-step';
+  div.innerHTML='<div class="book-step-lbl">Review &amp; Submit</div><h4>Confirm your booking</h4>'+
+    '<div class="confirm-card">'+
+    '<div class="confirm-row"><span class="cl">Service</span><span class="cv">'+esc(d.services)+'</span></div>'+
+    '<div class="confirm-row"><span class="cl">Address</span><span class="cv">'+esc(d.street+', '+d.city+' '+d.zip)+'</span></div>'+
+    '<div class="confirm-row"><span class="cl">Property</span><span class="cv">'+esc(d.prop)+'</span></div>'+
+    '<div class="confirm-row"><span class="cl">Date</span><span class="cv">'+esc(fmtDate(d.date))+'</span></div>'+
+    '<div class="confirm-row"><span class="cl">Time</span><span class="cv">'+esc(d.time)+'</span></div>'+
+    '<div class="confirm-row"><span class="cl">Contact</span><span class="cv">'+esc(d.fname+' '+d.lname+' - '+d.phone)+'</span></div>'+
+    (d.notes?'<div class="confirm-row"><span class="cl">Notes</span><span class="cv">'+esc(d.notes)+'</span></div>':'')+
+    '</div>'+
+    '<div id="ai-conf" class="ai-msg-box" style="opacity:0.6;font-size:0.75rem;">&#128197; Ready to submit your request.</div>'+
+    '<div style="display:flex;gap:6px;margin-top:6px;"><button class="btn-back" id="btn-s4bk">&#8249; Edit</button><button class="btn-next" id="btn-sub" style="flex:1;">&#128197; Submit Request</button></div>';
+  p.appendChild(div);
+  document.getElementById('btn-s4bk').addEventListener('click',function(){bStep--;renderBS();});
+  document.getElementById('btn-sub').addEventListener('click',submitB);
+  // Fire AI confirmation in background — does NOT block submit
+  getAIConf(d);
+}
+
+function getAIConf(d){
+  var el=document.getElementById('ai-conf');
+  var msg='Service:'+d.services+', Address:'+d.street+' '+d.city+' '+d.zip+'('+d.prop+'), Date:'+fmtDate(d.date)+', Time:'+d.time+', Name:'+d.fname+' '+d.lname+', Phone:'+d.phone+(d.notes?', Notes:'+d.notes:'');
+  // 5-second timeout — if API is slow, don't block the user
+  var controller=typeof AbortController!=='undefined'?new AbortController():null;
+  var timer=setTimeout(function(){if(controller)controller.abort();},5000);
+  fetch(CU,{method:'POST',headers:{'Content-Type':'application/json','x-api-key':CK,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},signal:controller?controller.signal:undefined,body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:120,system:BSY,messages:[{role:'user',content:msg}]})})
+  .then(function(r){return r.json();})
+  .then(function(data){
+    clearTimeout(timer);
+    var reply=(data.content&&data.content[0]&&data.content[0].text)?data.content[0].text.trim():'';
+    var el2=document.getElementById('ai-conf');
+    if(el2&&reply){el2.style.opacity='1';el2.style.background='#f0fdf4';el2.style.borderColor='#86efac';el2.innerHTML='&#10003; '+esc(reply);}
+  })
+  .catch(function(){
+    clearTimeout(timer);
+    var el2=document.getElementById('ai-conf');
+    if(el2){el2.style.opacity='0.6';el2.innerHTML='&#128197; Everything looks good — tap Submit!';}
+  });
+}
+
+function submitB(){
+  var btn=document.getElementById('btn-sub');
+  if(!btn||btn.disabled)return;
+  btn.disabled=true;
+  btn.innerHTML='&#10003; Saved!';
+  btn.style.background='#15803d';
+
+  // 1. Save booking to storage first
+  var d=bData;
+  if(d&&d.date){
+    var lb=Object.assign({},d);
+    lb.status='new';
+    lb.customer=(lb.fname||'')+' '+(lb.lname||'');
+    lb.address=(lb.street||'')+', '+(lb.city||'');
+    lb.isDemo=false;
+    lb.id=Date.now().toString();
+    liveBookings.push(lb);
+    saveBookings();
+  }
+
+  // 2. Swap to success screen immediately
+  var p=document.getElementById('book-pane');
+  if(!p)return;
+  p.innerHTML='';
+  setP(4);
+  var div=document.createElement('div');
+  div.className='book-step';
+  div.innerHTML=
+    '<div class="success-banner">'+
+      '<div class="sico">&#10003;</div>'+
+      '<h4>Request Sent!</h4>'+
+      '<p>Thanks <strong>'+esc(d.fname)+'</strong>! Your <strong>'+esc(d.services)+'</strong> request for <strong>'+esc(fmtDate(d.date))+'</strong> is received.</p>'+
+      '<p>We will call <strong>'+esc(d.phone)+'</strong> within 1 business day.</p>'+
+      '<p style="font-size:0.72rem;color:#16a34a;margin-top:6px;">&#10003; Added to the calendar &amp; reports below.</p>'+
+    '</div>'+
+    '<a href="tel:3166806549" style="text-decoration:none;display:block;margin-top:10px;">'+
+      '<button class="btn-next" style="width:100%;">&#128222; Call: (316) 680-6549</button>'+
+    '</a>'+
+    '<button class="btn-next" id="btn-nbk" style="width:100%;margin-top:8px;background:rgba(14,165,233,0.12);color:var(--blue);box-shadow:none;border:1.5px solid var(--sky);">&#43; Book Another Service</button>'+
+    '<button class="btn-back" id="btn-cls" style="width:100%;margin-top:6px;">&#215; Close</button>';
+  p.appendChild(div);
+
+  document.getElementById('btn-nbk').addEventListener('click',function(){
+    bStarted=false;bStep=0;bData={};bStarted=true;renderBS();
+  });
+  document.getElementById('btn-cls').addEventListener('click',function(){
+    if(chatOpen)toggleChat();
+    var cal=document.getElementById('schedule');
+    if(cal)setTimeout(function(){cal.scrollIntoView({behavior:'smooth',block:'start'});},300);
+  });
+
+  // 3. Update calendar + reports after a tick so DOM swap completes first
+  setTimeout(function(){
+    try{renderCal();}catch(e){}
+    try{buildReport();}catch(e){}
+    // If the client portal is open, refresh its current tab in real time
+    try{
+      var ov=document.getElementById('cp-overlay');
+      if(ov&&ov.classList.contains('open')&&cpUser){cpShowTab(cpActiveTab);}
+    }catch(e){}
+  },50);
+}
+
+// Icon definitions (emoji entities, consistent with the rest of the site)
+var ICO={
+  phone:'&#128222;',     // telephone receiver
+  portal:'&#9881;',      // gear
+  calendar:'&#128197;',  // calendar
+  pdf:'&#128196;',       // page facing up
+  lock:'&#128274;',      // lock
+  money:'&#128176;',     // money bag
+  check:'&#10003;'       // check mark
+};
+function applyIcons(){
+  try{
+    document.querySelectorAll('.ico').forEach(function(span){
+      var html=span.innerHTML.trim();
+      var m=html.match(/^<!--\s*([\w-]+)\s*-->$/);
+      if(m&&ICO[m[1]]){span.innerHTML=ICO[m[1]];}
+    });
+  }catch(e){}
+}
+
+// Init
+loadBookings();
+renderCal();
+applyIcons();
+(function(){var g=document.getElementById('est-grid');if(g&&window.innerWidth<900)g.style.gridTemplateColumns='1fr';})();
+
+// Debounced resize handler
+var _resizeTimer;
+window.addEventListener('resize',function(){
+  clearTimeout(_resizeTimer);
+  _resizeTimer=setTimeout(function(){
+    var g=document.getElementById('est-grid');if(g)g.style.gridTemplateColumns=window.innerWidth<900?'1fr':'1fr 1fr';
+  },100);
+});
+
+// Global Escape key: close portal, chat, and calendar popup
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Escape')return;
+  var ov=document.getElementById('cp-overlay');
+  if(ov&&ov.classList.contains('open')){cpClose();return;}
+  if(chatOpen){toggleChat();return;}
+  closePop();
+});
+</script>
+</body>
+</html>
